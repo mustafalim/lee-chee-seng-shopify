@@ -11,7 +11,7 @@
       background:{%- if section.settings.gradient_bg != blank -%} {{ section.settings.gradient_bg }} {%- else -%} {{ section.settings.background }} {%- endif -%};
       color:{{ section.settings.text }};
       --color-body-text-rgb:{{ section.settings.text.red }}, {{ section.settings.text.green }}, {{ section.settings.text.blue }};
-        
+
     }
     .announcement-slide #HeaderLanguageForm .localization-form__select{
       color :{{ section.settings.text }};
@@ -24,8 +24,9 @@
     list-style: none;
     padding: 0;
     z-index: 1;
+    font-weight: 500;
   }
- 
+
   .announcement-swiper .swiper-button-prev, .announcement-swiper .swiper-button-next{
     background: transparent;
     box-shadow: none;
@@ -60,7 +61,7 @@
     display: grid;
     overflow: hidden;
   }
-  
+
   .announcement-item{
     grid: auto / auto-flow auto 10rem;
     place-items: center;
@@ -115,7 +116,7 @@
 </style>
 <!-- announcement-bar-slide.liquid -->
 
-<div class="announcement-bar-carousel announcement-slide d-flex {% if section.blocks.size == 1 %} announcement-single {% endif %}" 
+<div class="announcement-bar-carousel announcement-slide d-flex {% if section.blocks.size == 1 %} announcement-single {% endif %}"
       data-aos="{{ section.settings.animation }}" data-aos-duration="100" data-section-id="{{ section.id }}" data-section-type="announcementswiper">
   {%- if type == 'carousel' -%}
     <div class="announcement-wrapper container text-center ">
@@ -135,9 +136,9 @@
                           {%- when 'Item' -%}
                           <div class="swiper-slide rte m-0">
                               <div class="py-2 my-1 {{ section.settings.size_text }}">
-                              {{ block.settings.code }} 
-                              {% if block.settings.button_text != blank %} 
-                              <a class="d-inline-block px-2" href="{{ block.settings.button_link }}">{{ block.settings.button_text }}</a> 
+                              {{ block.settings.code }}
+                              {% if block.settings.button_text != blank %}
+                              <a class="d-inline-block px-2" href="{{ block.settings.button_link }}">{{ block.settings.button_text }}</a>
                               {% endif %}
                               </div>
                           </div>
@@ -152,11 +153,11 @@
             <div class="d-none d-lg-flex align-items-center {{ section.settings.size_text }}">
               {%- liquid
                 assign enable_image = section.settings.enable_image
-                assign enable_name = section.settings.enable_name 
+                assign enable_name = section.settings.enable_name
                 if section.settings.e_hd_currency and localization.available_countries.size > 1
                   render 'localization' id: 'HeaderCountryForm', enable_image: enable_image, enable_name: enable_name
                 endif
-              if section.settings.enable_language_selector and localization.available_languages.size > 1 
+              if section.settings.enable_language_selector and localization.available_languages.size > 1
                   render 'localization-language', id: 'HeaderLanguageForm', class: section.settings.size_text, enable_name: enable_name
                 endif
               -%}
@@ -177,12 +178,12 @@
                   loading="lazy"
                   width="{{ block.settings.image.width }}"
                   height="{{ block.settings.image.height }}">
-              {% endif %}  
-              {{ block.settings.code }} 
-                {% if block.settings.button_text != blank %} 
+              {% endif %}
+              {{ block.settings.code }}
+                {% if block.settings.button_text != blank %}
                 <a class="d-inline-block px-2 link" href="{{ block.settings.button_link }}">
-                  {{ block.settings.button_text }}</a> 
-                {% endif %} 
+                  {{ block.settings.button_text }}</a>
+                {% endif %}
               </span>
               <span class="announcement-{{ section.settings.scroll_dot }}"></span>
         {%- endfor -%}
@@ -190,7 +191,7 @@
     {%- endfor -%}
     </div>
   {%- endif -%}
-  
+
 </div>
 
 {%- endif -%}
