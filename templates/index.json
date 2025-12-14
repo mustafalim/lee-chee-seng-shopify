@@ -16,7 +16,6 @@
           "type": "banner",
           "settings": {
             "width": "4",
-            "image": "shopify://shop_images/offer-banner6.jpg",
             "subtitle": "Elevate Your Style Quotient",
             "color_sub": "#000000",
             "title": "the Art of Fashion <br>Expression",
@@ -38,7 +37,6 @@
           "type": "banner",
           "settings": {
             "width": "4",
-            "image": "shopify://shop_images/offer-banner3.jpg",
             "subtitle": "Trendsetting Fashion",
             "color_sub": "#ffffff",
             "title": "Fashion That <br>Defines You",
@@ -60,7 +58,6 @@
           "type": "banner",
           "settings": {
             "width": "4",
-            "image": "shopify://shop_images/offer-banner4.jpg",
             "subtitle": "Elevate Your Wardrobe",
             "color_sub": "#000000",
             "title": "Timeless Style <br> Trends",
@@ -110,7 +107,6 @@
           "type": "collection",
           "settings": {
             "collection": "frontpage",
-            "image": "shopify://shop_images/men.jpg",
             "icon": ""
           }
         },
@@ -118,7 +114,6 @@
           "type": "collection",
           "settings": {
             "collection": "women",
-            "image": "shopify://shop_images/women.jpg",
             "icon": ""
           }
         },
@@ -126,7 +121,6 @@
           "type": "collection",
           "settings": {
             "collection": "jewellery",
-            "image": "shopify://shop_images/accessories.jpg",
             "icon": ""
           }
         },
@@ -134,7 +128,6 @@
           "type": "collection",
           "settings": {
             "collection": "outerwear",
-            "image": "shopify://shop_images/outerwear.jpg",
             "icon": ""
           }
         },
@@ -142,7 +135,6 @@
           "type": "collection",
           "settings": {
             "collection": "shoes",
-            "image": "shopify://shop_images/shoes.jpg",
             "icon": ""
           }
         },
@@ -150,7 +142,6 @@
           "type": "collection",
           "settings": {
             "collection": "glasses",
-            "image": "shopify://shop_images/glasses.jpg",
             "icon": ""
           }
         }
@@ -198,7 +189,6 @@
           "type": "banner",
           "settings": {
             "width": "6",
-            "image": "shopify://shop_images/offer-banner1_cd5ff0a4-83f8-4855-b0ca-254ffafee564.jpg",
             "subtitle": "Seasonal Style Sensations",
             "color_sub": "#000000",
             "title": "Unwrap the Hottest <br>Trends of the Yea",
@@ -220,7 +210,6 @@
           "type": "banner",
           "settings": {
             "width": "6",
-            "image": "shopify://shop_images/offer-banner2_1e89c27a-54d6-49ae-ac26-6415cb2b5f64.jpg",
             "subtitle": "Elevate Your Style Game",
             "color_sub": "#000000",
             "title": "Discover the Latest<br> in Fashion",
@@ -273,7 +262,6 @@
             "button": "discover now",
             "link": "shopify://collections",
             "style_btn": "btn-underline btn-underline-white",
-            "image": "shopify://shop_images/banner-3-2.jpg",
             "colortabimage": "#ffffff",
             "bg_overlay": "#000000",
             "opacity_bgbox": 0,
@@ -288,7 +276,6 @@
             "button": "discover now",
             "link": "shopify://collections",
             "style_btn": "btn-underline btn-underline-white",
-            "image": "shopify://shop_images/banner-3-1.jpg",
             "colortabimage": "#ffffff",
             "bg_overlay": "#000000",
             "opacity_bgbox": 0,
@@ -303,7 +290,6 @@
             "button": "discover now",
             "link": "shopify://collections",
             "style_btn": "btn-underline btn-underline-white",
-            "image": "shopify://shop_images/filler-3.jpg",
             "colortabimage": "#ffffff",
             "bg_overlay": "#000000",
             "opacity_bgbox": 0,
@@ -362,7 +348,6 @@
             "button": "discover now",
             "link": "shopify://collections",
             "style_btn": "btn-underline btn-underline-white",
-            "image": "shopify://shop_images/spring-1.jpg",
             "video": "",
             "colortabimage": "#ffffff",
             "bg-overlay": "#000000",
@@ -399,8 +384,7 @@
             "bgblock": "#ffffff",
             "title": "Free Shipping & Retuns",
             "description": "Free Shipping On All Orders Over $99",
-            "icon": "",
-            "image_icon": "shopify://shop_images/truck.png"
+            "icon": ""
           }
         },
         "template--16545141948547__d723b982-ca8f-4804-8a63-aadb7795988f-service-2": {
@@ -409,8 +393,7 @@
             "bgblock": "#ffffff",
             "title": "100% Secure Payment",
             "description": "We ensure secure payment",
-            "icon": "",
-            "image_icon": "shopify://shop_images/money.png"
+            "icon": ""
           }
         },
         "template--16545141948547__d723b982-ca8f-4804-8a63-aadb7795988f-service-3": {
@@ -419,8 +402,7 @@
             "bgblock": "#ffffff",
             "title": "Money Back Guarantee",
             "description": "100% Money Back Guarantee",
-            "icon": "",
-            "image_icon": "shopify://shop_images/hand.png"
+            "icon": ""
           }
         },
         "e2952e24-9b68-4655-b925-e350b0a62a69": {
@@ -429,8 +411,7 @@
             "bgblock": "#ffffff",
             "title": "24/7 Customers Support",
             "description": "24/7 Dedicated Support",
-            "icon": "",
-            "image_icon": "shopify://shop_images/chat.png"
+            "icon": ""
           }
         }
       },
@@ -511,56 +492,48 @@
         "template--19803510538560__3fbc3961-b3b3-483b-9070-76e53c90c3c9-1688611842d27b152a-0": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/insta1.jpg",
             "link": ""
           }
         },
         "template--19803510538560__3fbc3961-b3b3-483b-9070-76e53c90c3c9-1688611842d27b152a-1": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/insta2.jpg",
             "link": ""
           }
         },
         "template--19803510538560__3fbc3961-b3b3-483b-9070-76e53c90c3c9-1688611842d27b152a-2": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/insta3.jpg",
             "link": ""
           }
         },
         "template--19803510538560__3fbc3961-b3b3-483b-9070-76e53c90c3c9-1688611842d27b152a-3": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/insta4.jpg",
             "link": ""
           }
         },
         "template--19803510538560__3fbc3961-b3b3-483b-9070-76e53c90c3c9-1688611842d27b152a-4": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/insta5.jpg",
             "link": ""
           }
         },
         "template--19803510538560__3fbc3961-b3b3-483b-9070-76e53c90c3c9-1688611842d27b152a-5": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/insta6.jpg",
             "link": ""
           }
         },
         "f52bcd79-edc2-4215-9816-d4d2ffbd4a60": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/insta7.jpg",
             "link": ""
           }
         },
         "975035b5-e5af-441d-9cfd-0add0b5bf531": {
           "type": "logo",
           "settings": {
-            "image": "shopify://shop_images/insta8.jpg",
             "link": ""
           }
         }
@@ -598,6 +571,57 @@
         "marginsection": "0px 0px 0px 0px",
         "marginmobile": "0px 0px 0px 0px"
       }
+    },
+    "image_content_46cHQf": {
+      "type": "image-content",
+      "blocks": {
+        "image_block_9re6aj": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/home-nature-design.png"
+          }
+        },
+        "text_block_8hVb3F": {
+          "type": "text_block",
+          "settings": {
+            "width": "100%",
+            "bgtext": "#ffffff",
+            "title_color": "rgba(0,0,0,0)",
+            "subtitle": "LEE CHEE SENG",
+            "title": "Nature’s design, our Biodegradable future.",
+            "size_text": "h2",
+            "text": "<p>Lee Chee Seng Polythene Co. is a Singapore-based partnership established on 21 January 1981. The company’s primary business is the wholesale of packaging materials, serving a range of industries that need polythene and related packaging solutions. Additionally, it engages in retailing books, newspapers, and stationery as a secondary activity.</p>\n<p>Located at 348 Jurong East Avenue 1, #01-1255, Yuhua Place, Singapore 600348, Lee Chee Seng Polythene Co. remains operational and is registered under UEN 27488800M.</p>",
+            "answer_content": "",
+            "style_btn": "btn-underline btn-underline-white",
+            "button": "discover now",
+            "link": "",
+            "enable_padding": true,
+            "align": "left"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_9re6aj",
+        "text_block_8hVb3F"
+      ],
+      "custom_css": [
+        ".image-content__image-wrapper img {border-radius: 20px; }"
+      ],
+      "name": "Image with text",
+      "settings": {
+        "animation": "",
+        "setwidth": "container",
+        "bgsection": "#ffffff",
+        "rangebg": 0,
+        "bgbefore": "transparent",
+        "bg_pos": "left",
+        "enable_padding": true,
+        "align_center": true,
+        "paddingsection": "0px 0px 0px 0px",
+        "paddingmobile": "40px 0px 40px 0px",
+        "marginsection": "0px 0px 0px 0px",
+        "marginmobile": "0px 0px 0px 0px"
+      }
     }
   },
   "order": [
@@ -608,6 +632,7 @@
     "28037068-7e6c-428f-9c9c-526dea1e9c86",
     "d723b982-ca8f-4804-8a63-aadb7795988f",
     "3e04d8d0-b36c-4e9e-8f16-6987ee712faa",
-    "3fbc3961-b3b3-483b-9070-76e53c90c3c9"
+    "3fbc3961-b3b3-483b-9070-76e53c90c3c9",
+    "image_content_46cHQf"
   ]
 }
