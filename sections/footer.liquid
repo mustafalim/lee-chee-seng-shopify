@@ -317,6 +317,25 @@
       transform:translateY(-50%);
     }
   }
+  .footer-whatsapp-wrapper {
+    position: relative;
+  }
+  .footer-whatsapp {
+    background: #fff;
+    font-weight: 500;
+    padding: 10px 10px 10px 15px;
+    border-radius: 500px;
+    display: flex;
+    align-items: center;
+    column-gap: 12px;
+    position: absolute;
+    bottom: -50px;
+    right: 0;
+  }
+  .footer-whatsapp svg {
+    width: 35px;
+    height: 35px;
+  }
 </style>
 {%- liquid
   assign bg_image = section.settings.image_bg
@@ -331,7 +350,7 @@
  data-section-id="{{ section.id }}"
   data-acc="{{ acc_mobile }}" >
   <div class="site-footer--head">
-  <div class="{{ section.settings.setwidth }}">
+  <div class="{{ section.settings.setwidth }} footer-whatsapp-wrapper">
     <div class="row">
       {%- for block in section.blocks -%}
       {%- liquid
@@ -552,6 +571,10 @@
       </div>
       {%- endfor -%}
     </div>
+    <a class="footer-whatsapp" href="https://wa.me/{{section.settings.whatsapp_number}}" target="_blank">
+      <span>CHAT WITH US</span>
+      {%- render 'icon-whatsapp' -%}
+    </a>
     </div>
   </div>
   <div class="site-footer__copyright" >
@@ -903,6 +926,16 @@
       "label": "Enable Copyright Default",
       "default": true,
       "info": "If disable you would use Custom Copyright"
+    },
+    {
+      "type": "header",
+      "content": "Whatsapp"
+    },
+    {
+      "type": "text",
+      "id": "whatsapp_number",
+      "label": "Whatsapp number",
+      "info": "WhatsApp number with country code, without “+” (example: 6587654321)"
     },
     {
       "type": "textarea",
