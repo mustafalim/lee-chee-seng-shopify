@@ -60,7 +60,6 @@
               width="{{ block.settings.image_mobile.width }}"
               height="{{ block.settings.image_mobile.height }}">
             {%- endif -%}
-          <a class="banner-overlay" href="{{ block.settings.button_link | default: "#" }}"></a>
           {%- else -%}
           {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
           {%- endif -%}
@@ -91,7 +90,7 @@
                   {%- endif -%}
                   {%- if block.settings.button_text != blank -%}
                     <div class="pt-4">
-                      <a href="{{ block.settings.button_link }}" class="btn {{ block.settings.style_btn }} ">
+                      <a href="{{ block.settings.button_link | default: "#" }}" class="btn {{ block.settings.style_btn }} ">
                         {{ block.settings.button_text }}
                       </a>
                     </div>
