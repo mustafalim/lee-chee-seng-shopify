@@ -60,6 +60,7 @@
               width="{{ block.settings.image_mobile.width }}"
               height="{{ block.settings.image_mobile.height }}">
             {%- endif -%}
+          <div class="banner-overlay"></div>
           {%- else -%}
           {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
           {%- endif -%}
