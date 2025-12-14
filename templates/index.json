@@ -18,7 +18,7 @@
             "width": "4",
             "subtitle": "Elevate Your Style Quotient",
             "color_sub": "#000000",
-            "title": "the Art of Fashion <br>Expression",
+            "title": "the Art of Fashion Expression",
             "color_title": "#000000",
             "size_text": "h2",
             "description": "<p>Step into a world of sartorial sophistication.</p>",
@@ -39,7 +39,7 @@
             "width": "4",
             "subtitle": "Trendsetting Fashion",
             "color_sub": "#ffffff",
-            "title": "Fashion That <br>Defines You",
+            "title": "Fashion That Defines You",
             "color_title": "#ffffff",
             "size_text": "h2",
             "description": "<p>Lorem ipsum dolor sit amet</p>",
@@ -605,7 +605,7 @@
         "text_block_8hVb3F"
       ],
       "custom_css": [
-        ".image-content__image-wrapper img {border-radius: 20px; }"
+        ".image-content__image-wrapper img {border-radius: 20px;}"
       ],
       "name": "Image with text",
       "settings": {
@@ -613,10 +613,59 @@
         "setwidth": "container",
         "bgsection": "#ffffff",
         "rangebg": 0,
-        "bgbefore": "transparent",
+        "bgbefore": "rgba(0,0,0,0)",
         "bg_pos": "left",
         "enable_padding": true,
         "align_center": true,
+        "paddingsection": "0px 0px 0px 0px",
+        "paddingmobile": "40px 0px 40px 0px",
+        "marginsection": "0px 0px 0px 0px",
+        "marginmobile": "0px 0px 0px 0px"
+      }
+    },
+    "grid_banner_6abKqC": {
+      "type": "grid-banner",
+      "blocks": {
+        "banner_yyGGge": {
+          "type": "banner",
+          "settings": {
+            "width": "12",
+            "image": "shopify://shop_images/home-footer-banner.jpg",
+            "subtitle": "Trending Styles",
+            "color_sub": "#fff5de",
+            "title": "Latest Fashion Trends in Clothing<br>That Everyone Loves",
+            "color_title": "#fff5de",
+            "size_text": "h2",
+            "description": "<p>Elevate your wardrobe with the pieces that fashion enthusiasts can't get enough of.</p>",
+            "bg_color": "#ffffff",
+            "colordef": "#fff5de",
+            "opacity_bg": 0,
+            "style_btn": "btn-theme btn-white",
+            "button_text": "Contact us",
+            "button_link": "",
+            "vertical": "mid",
+            "horizontal": "center",
+            "text_align": "center"
+          }
+        }
+      },
+      "block_order": [
+        "banner_yyGGge"
+      ],
+      "name": "Grid banner",
+      "settings": {
+        "animation": "",
+        "setwidth": "full",
+        "bgsection": "#ffffff",
+        "title_top": "",
+        "title": "",
+        "des": "",
+        "align-heading": "center",
+        "no_gutter": false,
+        "show_overlay": true,
+        "gradient_overlay": true,
+        "bg_overlay": "#434343",
+        "opacity_overlay": 0.5,
         "paddingsection": "0px 0px 0px 0px",
         "paddingmobile": "40px 0px 40px 0px",
         "marginsection": "0px 0px 0px 0px",
@@ -633,6 +682,7 @@
     "d723b982-ca8f-4804-8a63-aadb7795988f",
     "3e04d8d0-b36c-4e9e-8f16-6987ee712faa",
     "3fbc3961-b3b3-483b-9070-76e53c90c3c9",
-    "image_content_46cHQf"
+    "image_content_46cHQf",
+    "grid_banner_6abKqC"
   ]
 }

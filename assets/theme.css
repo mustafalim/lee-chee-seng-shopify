@@ -2679,6 +2679,7 @@ span.js-fake-view.text-theme {
 }
 .banner-theme img {
   max-width: unset;
+  width: 100%;
 }
 .banner-theme > a {
   position: absolute;

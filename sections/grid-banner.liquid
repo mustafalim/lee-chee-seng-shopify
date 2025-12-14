@@ -44,17 +44,17 @@
         --g-figcaption-op: {{ block.settings.opacity_bg }};"
       >
           {%- if block.settings.image != blank -%}
-          <img 
-            src="{{ block.settings.image | image_url: width: 1, height: 1 }}" 
-            class="lazyload transition scale-in {% if block.settings.image_mobile != blank %} d-none d-lg-block {% endif %}" 
+          <img
+            src="{{ block.settings.image | image_url: width: 1, height: 1 }}"
+            class="lazyload transition scale-in {% if block.settings.image_mobile != blank %} d-none d-lg-block {% endif %}"
             data-src="{{ block.settings.image | image_url: width: 1920 }}"
             loading="lazy"
             width="{{ block.settings.image.width }}"
             height="{{ block.settings.image.height }}">
             {%- if block.settings.image_mobile != blank -%}
-            <img 
-              src="{{ block.settings.image_mobile | image_url: width: 1, height: 1 }}" 
-              class="lazyload transition  {% if block.settings.image_mobile != blank %} d-lg-none {% endif %}" 
+            <img
+              src="{{ block.settings.image_mobile | image_url: width: 1, height: 1 }}"
+              class="lazyload transition  {% if block.settings.image_mobile != blank %} d-lg-none {% endif %}"
               data-src="{{ block.settings.image_mobile | image_url: width: 1920 }}"
               loading="lazy"
               width="{{ block.settings.image_mobile.width }}"
@@ -66,12 +66,12 @@
           {%- endif -%}
           <figcaption class="figcaption--{{ block.id }}">
             <style>
-            
+
                 .figcaption--{{ block.id }} .h4{
                   font-size: calc(var(--g-h4-font-size) + 8px);
                 }
-              
-                
+
+
               .figcaption--{{ block.id }} .link-base:not(.btn-theme){
                 padding-left: 0;
                 color: #fff;
@@ -98,7 +98,7 @@
                     {%- endif -%}
                 </div>
               </div>
-          </figcaption>		
+          </figcaption>
         </figure>
       </div>
       {%- endfor -%}
