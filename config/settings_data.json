@@ -16,13 +16,13 @@
     "loading": "border",
     "favicon": "shopify://shop_images/favicon.png",
     "meta_description": "Rosyz Shopify Template with multiple layouts and styles allows you to create different structures and satisfies any specific requirements for different kinds of business.",
-    "color_primary": "#222222",
-    "color_secondary": "#e35353",
+    "color_primary": "#2b2b2b",
+    "color_secondary": "#d2232a",
     "color_body_bg": "#ffffff",
     "color_content_bg": "#ffffff",
-    "color_body_headings": "#222222",
-    "color_sub": "#e35353",
-    "color_body_text": "#414141",
+    "color_body_headings": "#2b2b2b",
+    "color_sub": "#d2232a",
+    "color_body_text": "#2b2b2b",
     "color_cta": "rgba(0,0,0,0)",
     "color_button_text": "#000000",
     "alert_text": "#000000",
@@ -32,9 +32,9 @@
     "shipping_active": "#343a40",
     "font_family_custom": false,
     "font_family_custom_body": true,
-    "font_family": "futura_n4",
+    "font_family": "inter_n5",
     "font_family_google": "",
-    "font_family2": "poppins_n4",
+    "font_family2": "inter_n5",
     "font_family2_google": "",
     "slide_font_size": 50,
     "slide_font_weight": "400",
@@ -59,9 +59,9 @@
     "h6_font_size": 18,
     "h6_font_weight": "500",
     "h6_font_lineheight": "1.4",
-    "font_weight_body": "400",
+    "font_weight_body": "500",
     "base_size": 15,
-    "body_font_lineheight": "1.6",
+    "body_font_lineheight": "1",
     "font_family_product": "--g-font-1",
     "font_weight_product": "500",
     "font_transform_product": "capitalize",
@@ -1708,36 +1708,27 @@
           "a00daf6f-fb1c-4351-80dc-24e405bf630e": {
             "type": "Item",
             "settings": {
-              "code": "<span style=\"font-weight:600;\">Free Express Shipping on orders $200!</span>",
-              "button_text": "Shop now",
+              "code": "FREE SHIPPING ON ALL ORDERS OVER $100",
+              "button_text": "SHOP NOW",
               "button_link": "shopify://collections"
-            }
-          },
-          "afb084a9-2a31-4207-9d23-694c0f6b1281": {
-            "type": "Item",
-            "settings": {
-              "code": "<span style=\"font-weight:600;\">Free Express Shipping on orders $200!</span>",
-              "button_text": "Shop Now",
-              "button_link": "shopify://collections/best-seller"
             }
           }
         },
         "block_order": [
-          "a00daf6f-fb1c-4351-80dc-24e405bf630e",
-          "afb084a9-2a31-4207-9d23-694c0f6b1281"
+          "a00daf6f-fb1c-4351-80dc-24e405bf630e"
         ],
         "settings": {
           "enable": true,
           "animation": "fade",
-          "size_text": "small",
+          "size_text": "normal",
           "announ_type": "carousel",
           "scroll_dot": "dot",
           "size_icon": 24,
           "speed": 10,
           "scroll_type": "from-right",
-          "background": "#222222",
+          "background": "#e4d2c0",
           "gradient_bg": "",
-          "text": "#ffffff",
+          "text": "#2b2b2b",
           "text_left": "",
           "enable_language_selector": true
         }
