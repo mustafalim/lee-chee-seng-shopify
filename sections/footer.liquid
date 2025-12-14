@@ -32,7 +32,7 @@
     background-color: var(--footer-bg);
     color: var(--footer-text);
     border-top: 1px solid var(--footer-head-border);
-    line-height: 1.8;
+    line-height: 1.6;
   }
   .site-footer a {
     color: var(--footer-text);
@@ -124,8 +124,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #000;
-    color: #fff;
+    background-color: #FFFFFF;
+    color: #2B2B2B;
     transition: background-color .3s ease;
   }
   .site-footer .social-icons a:hover{
@@ -141,8 +141,8 @@
   }
   .site-footer .payment-icons li {
     padding: 5px 0;
-  }  
-  
+  }
+
   .site-footer__list-item a{position: relative;}
   .site-footer__list-item a::before{
     content:"";
@@ -163,8 +163,8 @@
     width: 100%;
   }
   .site-footer__copyright{
-    border-top:1px dashed rgba(255,255,255,.3);
-    color:var(--footer-text);
+    border-top: 0.8px solid rgba(0, 0, 0, 0.08);
+    color: var(--footer-text);
   }
   .site-footer .site-footer__section-title{
     font-family: var({{ section.settings.footer_font_family }});
@@ -215,14 +215,14 @@
     margin-right: 1.5rem;
   }
   .site-footer{
-    
+
     background-position: bottom center;
     background-repeat: no-repeat;
     background-size: cover;
   }
-  #footer-payment-methods li svg{ 
+  #footer-payment-methods li svg{
     height: auto;
-    width: 40px; 
+    width: 40px;
   }
   .section-footer-email .social-icons li span{display: none;}
   /* .section-footer-email .social-icons li i{color:var(--footer-title)} */
@@ -231,7 +231,7 @@
     color:var(--header-text);
   }
 
-  .footer-email .form-control::placeholder { 
+  .footer-email .form-control::placeholder {
     color:var(--footer-text);
     opacity: 1;
   }
@@ -323,36 +323,36 @@
   assign footer_align_title = section.settings.footer_align_title
   assign acc_mobile = section.settings.acc_mobile
 -%}
-<footer class="site-footer lazyload footer-{{ section.id }} {% if acc_mobile %} footer-acc-mobile{% endif %}" 
+<footer class="site-footer lazyload footer-{{ section.id }} {% if acc_mobile %} footer-acc-mobile{% endif %}"
  data-bgset="{% render 'bgset', image: bg_image %}"
  data-sizes="auto"
- data-parent-fit="cover" 
- data-section-type="footer" 
- data-section-id="{{ section.id }}" 
+ data-parent-fit="cover"
+ data-section-type="footer"
+ data-section-id="{{ section.id }}"
   data-acc="{{ acc_mobile }}" >
   <div class="site-footer--head">
   <div class="{{ section.settings.setwidth }}">
     <div class="row">
       {%- for block in section.blocks -%}
       {%- liquid
-        case block.settings.width 
-          when '16%' 
-          assign block_width = 'col-lg-2 col-md-4' 
-          when '20%' 
-          assign block_width = 'col-1-5 col-md-6 col-12' 
-          when '25%' 
-          assign block_width = 'col-lg-3 col-md-4' 
-          when '33%' 
-          assign block_width = 'col-lg-4 col-md-6' 
-          when '50%' 
-          assign block_width = 'col-lg-6' 
-          when '66%' 
-          assign block_width = 'col-lg-8 col-md-12' 
-          when '75%' 
-          assign block_width = 'col-lg-9 col-md-12' 
-          when '100%' 
-          assign block_width = 'col-12' 
-        endcase 
+        case block.settings.width
+          when '16%'
+          assign block_width = 'col-lg-2 col-md-4'
+          when '20%'
+          assign block_width = 'col-1-5 col-md-6 col-12'
+          when '25%'
+          assign block_width = 'col-lg-3 col-md-4'
+          when '33%'
+          assign block_width = 'col-lg-4 col-md-6'
+          when '50%'
+          assign block_width = 'col-lg-6'
+          when '66%'
+          assign block_width = 'col-lg-8 col-md-12'
+          when '75%'
+          assign block_width = 'col-lg-9 col-md-12'
+          when '100%'
+          assign block_width = 'col-12'
+        endcase
       -%}
       <div class="{{ block_width }} {% if section.settings.enable_border %} footer-column {% endif %}" {{ block.shopify_attributes }}>
         {%- case block.type -%}
@@ -366,7 +366,7 @@
           <div class="site-footer__list site-footer-block">
             {%- render 'block-social' -%}
           </div>
-          
+
         </div >
         {%- when 'contact' -%}
           <div class="site-footer__section text-lg-{{ footer_align_title }}">
@@ -395,7 +395,7 @@
                     <li>
                       {%- render 'icon-envelope' -%}
                       <a href="mailto:{{ block.settings.contact_mail }}"> {{ block.settings.contact_mail }} </a>
-                      
+
                     </li>
                   {%- endif -%}
                   {%- if block.settings.contact_web != blank -%}
@@ -432,8 +432,8 @@
               <div class="image-content__image-container logofooter mb-4" style="width: {{ block.settings.widthlogofooter }}px;max-width:100%;">
                 <a class="image-content__image-wrapper" href="/" style="padding-top:{{ 1 | divided_by: logo.aspect_ratio | times: 100 }}%;" >
                   {%- assign img_url = logo | image_url: width: 1 | replace: 'width=1', 'width={width}' -%}
-                  <img 
-                  class="lazyload transition img-logo" 
+                  <img
+                  class="lazyload transition img-logo"
                   src="{{ logo | image_url: width: 1, height: 1 }}"
                   data-srcset="{{ img_url }}"
                   data-widths="[360, 540, 720, 900, 1080, 1296, 1512, 1728, 2048]"
@@ -453,7 +453,7 @@
               </div>
             {% endif %}
           </div>
-         
+
         </div>
 
         {%- when 'newsletter' -%}
@@ -469,11 +469,11 @@
             background: var(--g-main);
           {% endunless %}
         }
-        .footer-email .form-group{ 
+        .footer-email .form-group{
           margin-bottom:0px;
-         
+
         }
-        
+
         @media(min-width:576px){
           .footer-email .form-group{
             border-radius:50px;
@@ -487,7 +487,7 @@
             background-color: transparent;
           }
           .form-group .form-control:focus ~ label{
-            display:none;     
+            display:none;
           }
         }
         {% endstyle %}
@@ -511,15 +511,15 @@
               </div>
               {%- endif -%}
               <div class="form-group d-flex align-items-center flex-column flex-sm-row">
-                <input 
-                type="email" 
+                <input
+                type="email"
                 value="{{ form.email }}"
-                placeholder="{{ 'general.newsletter_form.newsletter_placeholder' | t }}" 
-                name="contact[email]" 
-                id="NewsletterEmail-{{ block.id }}" 
-                class="form-control w-100 mb-3 mb-sm-0" 
+                placeholder="{{ 'general.newsletter_form.newsletter_placeholder' | t }}"
+                name="contact[email]"
+                id="NewsletterEmail-{{ block.id }}"
+                class="form-control w-100 mb-3 mb-sm-0"
                 aria-required="true"
-                autocorrect="off" 
+                autocorrect="off"
                 autocapitalize="off"
                 autocomplete="email"
                 {% if form.errors %}
@@ -561,11 +561,11 @@
     <div class="d-flex align-items-lg-center  {%- if section.settings.payment_info == 'svg' or  section.settings.imgpayment != blank -%} justify-content-lg-start{% else %}justify-content-center{% endif %}  flex-lg-row flex-column text-lg-left text-center">
             {%- liquid
               assign enable_image = section.settings.enable_image
-              assign enable_name = section.settings.enable_name 
+              assign enable_name = section.settings.enable_name
               if section.settings.e_ft_currency and localization.available_countries.size > 1
                 render 'localization' id: 'FooterCountryForm', enable_image: enable_image, enable_name: enable_name, idCountryList : 'FooterCountryList'
               endif
-            if section.settings.enable_language_selector and localization.available_languages.size > 1 
+            if section.settings.enable_language_selector and localization.available_languages.size > 1
                 render 'localization-language', id : 'FooterLanguageForm', enable_name: enable_name, idlist : 'FooterLanguageList'
               endif
             -%}
@@ -589,14 +589,14 @@
             {%- endif -%}
           {%- else -%}
             {%- if section.settings.imgpayment != blank -%}
-              <img class="lazyload" src="{{ section.settings.imgpayment | image_url: width: 1, height: 1 }}" data-src="{{ section.settings.imgpayment | image_url: width: 400 }}" 
+              <img class="lazyload" src="{{ section.settings.imgpayment | image_url: width: 1, height: 1 }}" data-src="{{ section.settings.imgpayment | image_url: width: 400 }}"
                 loading="lazy"
                 width="{{ section.settings.imgpayment.width }}"
                 height="{{ section.settings.imgpayment.height }}"/>
             {%- endif -%}
           {%- endif -%}
         </div>
-      
+
       </div>
     </div>
   </div>
@@ -934,7 +934,7 @@
       "unit": " px",
       "default": 65
     },
-    
+
     {
       "type": "header",
       "content": "Footer Padding Mobile "

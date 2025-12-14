@@ -15,7 +15,7 @@
     "sectionheading": "heading-1",
     "loading": "border",
     "favicon": "shopify://shop_images/favicon.png",
-    "meta_description": "Rosyz Shopify Template with multiple layouts and styles allows you to create different structures and satisfies any specific requirements for different kinds of business.",
+    "meta_description": "we specializes in disposable packaging and party ware, also provide delivery and wholesale services to the food industry.",
     "color_primary": "#2b2b2b",
     "color_secondary": "#d2232a",
     "color_body_bg": "#ffffff",
@@ -54,14 +54,14 @@
     "h4_font_transform": "capitalize",
     "h4_font_lineheight": "1.4",
     "h5_font_size": 20,
-    "h5_font_weight": "400",
-    "h5_font_lineheight": "1.4",
+    "h5_font_weight": "500",
+    "h5_font_lineheight": "1",
     "h6_font_size": 18,
     "h6_font_weight": "500",
     "h6_font_lineheight": "1.4",
-    "font_weight_body": "500",
+    "font_weight_body": "400",
     "base_size": 15,
-    "body_font_lineheight": "1",
+    "body_font_lineheight": "1.5",
     "font_family_product": "--g-font-1",
     "font_weight_product": "500",
     "font_transform_product": "capitalize",
@@ -554,7 +554,7 @@
           "519db978-bce0-47e7-8820-fe5f9a9fb3ee"
         ],
         "settings": {
-          "enable": true,
+          "enable": false,
           "duration": 8,
           "text": "Someone recently bought"
         }
@@ -2379,6 +2379,7 @@
         "blocks": {
           "89eb5f1e-2260-49c8-840c-f97823a94c9a": {
             "type": "newsletter",
+            "disabled": true,
             "settings": {
               "bg_new": "#f7f7f7",
               "border_new": "#f7f7f7",
@@ -2392,13 +2393,14 @@
               "width": "100%"
             }
           },
-          "dbb31813-2c26-4013-a98e-fe9a3fb8a781": {
+          "a0427cc6-35bf-4e6f-8da6-9542b963b62f": {
             "type": "text",
             "settings": {
-              "widthlogofooter": 130,
-              "title": "Get in touch",
-              "text": "<ul style=\"line-height:1.6;\">\n    <li class=\"mb-4\">\n        <div>\n<span style=\"color:#fff;font-weight:500;\">T:</span> + (08) 9055 0269</div>\n        <div>\n<span style=\"color:#fff;font-weight:500;\">E:</span> example@example.com</div>\n    </li>\n    <li style=\"color:#fff;font-weight:200;\">\n        50 Porana Place, West Casuarinas,<br>\n        Western Australia, Australia.\n    </li>\n</ul>",
-              "show_social": false,
+              "logofooter": "shopify://shop_images/logo.png",
+              "widthlogofooter": 260,
+              "title": "",
+              "text": "we specializes in disposable packaging and party ware, also provide delivery and wholesale services to the food industry.",
+              "show_social": true,
               "width": "25%"
             }
           },
@@ -2406,57 +2408,49 @@
             "type": "menu",
             "settings": {
               "link_list": "",
-              "width": "16%"
+              "width": "25%"
             }
           },
           "02938bc4-37e0-4199-a42d-5120a9cb648f": {
             "type": "menu",
             "settings": {
               "link_list": "",
-              "width": "16%"
+              "width": "25%"
             }
           },
-          "d788fcab-be74-4356-8d04-0370b7dc6128": {
-            "type": "menu",
-            "settings": {
-              "link_list": "",
-              "width": "16%"
-            }
-          },
-          "a0427cc6-35bf-4e6f-8da6-9542b963b62f": {
+          "dbb31813-2c26-4013-a98e-fe9a3fb8a781": {
             "type": "text",
             "settings": {
-              "widthlogofooter": 130,
-              "title": "",
-              "text": "Rosyz Shopify is a dynamic and innovative online retail platform that offers a wide range of products to customers worldwide.",
-              "show_social": true,
+              "widthlogofooter": 260,
+              "title": "Whatsapp Support",
+              "text": "<ul style=\"line-height:1.6;\">\n    <li class=\"mb-4\">\n        <div>\nT: + (08) 9055 0269</div>\n        <div>\nE: example@example.com</div>\n    </li>\n    <li>\n        50 Porana Place, West Casuarinas,<br>\n        Western Australia, Australia.\n    </li>\n</ul>",
+              "show_social": false,
               "width": "25%"
             }
           }
         },
         "block_order": [
           "89eb5f1e-2260-49c8-840c-f97823a94c9a",
-          "dbb31813-2c26-4013-a98e-fe9a3fb8a781",
+          "a0427cc6-35bf-4e6f-8da6-9542b963b62f",
           "0c325a8d-bfb1-450c-a284-90ce9f9f9ee5",
           "02938bc4-37e0-4199-a42d-5120a9cb648f",
-          "d788fcab-be74-4356-8d04-0370b7dc6128",
-          "a0427cc6-35bf-4e6f-8da6-9542b963b62f"
+          "dbb31813-2c26-4013-a98e-fe9a3fb8a781"
         ],
         "settings": {
           "setwidth": "container",
-          "background": "#222222",
+          "background": "#e4d2c0",
           "border_headfooter": "rgba(0,0,0,0)",
           "border-copryright": "#e1e1e1",
-          "text": "#ffffff",
-          "text_hover": "#e35353",
-          "title": "#e35353",
+          "text": "#2b2b2b",
+          "text_hover": "#d2232a",
+          "title": "#2b2b2b",
           "footer_align_title": "left",
           "enable_border": false,
           "footer_font_family": "--g-font-2",
-          "footer_font_size_title": 16,
-          "footer_font_weight": "700",
-          "footer_spacing": 0.1,
-          "footer_typetext": "uppercase",
+          "footer_font_size_title": 20,
+          "footer_font_weight": "500",
+          "footer_spacing": 0,
+          "footer_typetext": "capitalize",
           "acc_mobile": true,
           "e_ft_currency": true,
           "enable_image": true,
@@ -2464,7 +2458,7 @@
           "enable_language_selector": false,
           "payment_info": "svg",
           "copyright": false,
-          "customcopyright": "Copyright © 2023 <span style=\"color:#E35353;\">Rosyz.</span> All rights reserved",
+          "customcopyright": "COPYRIGHT © 2025 LEE CHEE SENG POLYTHENE CO. ALL RIGHTS RESERVED",
           "padding_top": 80,
           "padding_bottom": 20,
           "m_padding_top": 48,
