@@ -21,28 +21,28 @@
           {%- liquid
             assign hasMega = false
             assign titleCheckMega = link.title | escape | split: '[' | first | downcase
-            
+
             for block in blocks
               assign type = block.type
               assign block = block
-              assign menu_title = block.settings.menu_title | strip | downcase 
-    
+              assign menu_title = block.settings.menu_title | strip | downcase
+
               if titleCheckMega == menu_title
                 assign hasMega = true
                 assign intMega = forloop.index
-              break 
-              endif 
+              break
+              endif
             endfor
-           
+
           -%}
           {%- if hasMega -%}
-        <li class="site-nav__item site-nav__item-mega {% if link.active %} site-nav--active{% endif %}">
+        <li class="site-nav__item site-nav__item-mega site-nav__item-mega--custom {% if link.active %} site-nav--active{% endif %}">
           <a href="{{ link.url }}" class="site-nav__link dropdown-toggle" {% if link.active %} aria-current="page"{% endif %}>
             <span class="site-nav__title">{%- render 'processMenuTitle' , itemName: link.title -%}</span>
             {%- render 'processMenuLabel' , itemName: link.title -%}
           </a>
           <div class="site-nav__dropdown meganav meganav-{{ intMega }}" >
-            
+
             {%- liquid
               case type
               when 'menu-product'
@@ -55,7 +55,7 @@
                 render 'megamenu-banner-classic', intMega: intMega, link: link, block: block
             endcase
             -%}
-            
+
           </div>
         </li>
         {%- elsif link.links != blank -%}
@@ -80,17 +80,17 @@
         {%- endif -%}
         {%- endfor -%}
       </ul>
-    </nav>    
+    </nav>
   </div>
   <div class="header-bottom__right col-bottom__right">
         <div class="d-none d-lg-flex align-items-center">
           {%- liquid
             assign enable_image = section.settings.enable_image
-            assign enable_name = section.settings.enable_name 
+            assign enable_name = section.settings.enable_name
             if section.settings.e_hd_currency and localization.available_countries.size > 1
               render 'localization' id: 'HeaderCountryForm', enable_image: enable_image, enable_name: enable_name
             endif
-          if section.settings.enable_language_selector and localization.available_languages.size > 1 
+          if section.settings.enable_language_selector and localization.available_languages.size > 1
               render 'localization-language', id: 'HeaderLanguageForm', enable_name: enable_name
             endif
           -%}

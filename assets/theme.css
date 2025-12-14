@@ -2020,6 +2020,7 @@ ol {
   cursor: pointer;
   border-radius: 0;
   font-size: var(--g-font-size);
+  border: none;
 }
 .btn.focus,
 .btn:focus {
