@@ -1,15 +1,15 @@
 {%- if section.settings.enable_slideshow -%}
-{%- liquid 
+{%- liquid
   assign rotate = section.settings.autorotate
   assign dot = section.settings.slide_dot
--%} 
+-%}
 <style>
 .slideshow .slick-dots li button::before{
   border-color: {{ section.settings.color_dot_active }};
 }
 :root{
   --slidebg-arrow:{{ section.settings.bg_arrow.red }},{{ section.settings.bg_arrow.green }},{{ section.settings.bg_arrow.blue }};
- 
+
   --slide-arrow-color:{{ section.settings.color_arrow }};
   --slide-alpha : {{ section.settings.opacity_arrow }};
   --slide-rotate: {{ section.settings.autorotate_speed }}s;
@@ -188,14 +188,14 @@
         top: 10%;
         transform: translateY(0);
       }
-    
+
       .slideshow__text-content.slideshow__text-content--vertical-bottom {
         top: auto;
         bottom: 10%;
         transform: translateY(0);
       }
     }
-    
+
 .no-js .slideshow__text-content,.slick-initialized .slick-active .slideshow__text-content {}
 .no-js .slideshow__text-content,.slick-initialized .slick-active .slideshow__text-content li .slideshow__toptitle,.slick-initialized .slick-active .slideshow__text-content li .slideshow__title,
 .slick-initialized .slick-active .slideshow__text-content li .slideshow__subtitle,.slick-initialized .slick-active .slideshow__text-content .slideshow__btn{
@@ -222,7 +222,7 @@
 
 
 html:not(.no-js) .slideshow{
-	opacity:0;	
+	opacity:0;
   transform:scale(1.08);
   transition: transform .5s cubic-bezier(.33,0,0,1),opacity .5s cubic-bezier(.33,0,0,1);
 }
@@ -236,7 +236,7 @@ html:not(.no-js) .slideshow .slideshow__slide{
 
 html:not(.no-js) .slideshow .slideshow__slide:first-child{
 	display:block; visibility:hidden;
-} 
+}
 
 html:not(.no-js) .slideshow.slick-initialized .slideshow__slide{
 	display:block;visibility:visible!important;
@@ -268,7 +268,7 @@ html:not(.no-js) .slideshow.slick-initialized .slideshow__slide{
     padding-top: 0;
   }
 
-  .slideshow__text-content--mobile::after { 
+  .slideshow__text-content--mobile::after {
     display: none;
   }
 }
@@ -281,8 +281,9 @@ html:not(.no-js) .slideshow.slick-initialized .slideshow__slide{
   text-transform: var(--g-slide-font-transform);
 }
 .mega-subtitle{
-  font-size: 16px;
+  font-size: 15px;
   line-height: 1.2;
+  font-weight: 700;
 }
 @media (min-width:1500px) {
   .slideshow__title {
@@ -291,7 +292,7 @@ html:not(.no-js) .slideshow.slick-initialized .slideshow__slide{
 }
 @media (min-width:992px) {
   .mega-subtitle{
-    font-size: 24px;
+    font-size: 15px;
   }
 }
 @media (max-width:990px) {
@@ -468,11 +469,11 @@ html:not(.no-js) .slideshow.slick-initialized .slideshow__slide{
 
 .slideshow__slide-split .slide_img_left{
   left:0;
-} 
+}
 .slideshow__slide-split .slide_img_right{
   right:0;
   left:auto
-} 
+}
 
 @media (max-width:991px) {
   .slideshow .slick-arrow {
@@ -520,7 +521,7 @@ html:not(.no-js) .slideshow.slick-initialized .slideshow__slide{
   left: 0;
   width: 100%;
   text-align: center;
- 
+
 }
 .collection-slide-show .collection-card-1-infor *{
   color: #fff !important;
@@ -619,15 +620,15 @@ html:not(.no-js) .slideshow.slick-initialized .slideshow__slide{
 </style>
 <!-- slideshow-1.liquid -->
 {%- liquid
-  if section.settings.slideshow_height_adapt == 'adapt' 
-  assign first_block = section.blocks[0] 
-  if first_block.settings.image.aspect_ratio == blank 
-  assign min_aspect_ratio = 2.0 
-  else 
-  assign min_aspect_ratio = first_block.settings.image.aspect_ratio 
-  endif 
-  assign wrapper_height = 100 | divided_by: min_aspect_ratio 
-  endif 
+  if section.settings.slideshow_height_adapt == 'adapt'
+  assign first_block = section.blocks[0]
+  if first_block.settings.image.aspect_ratio == blank
+  assign min_aspect_ratio = 2.0
+  else
+  assign min_aspect_ratio = first_block.settings.image.aspect_ratio
+  endif
+  assign wrapper_height = 100 | divided_by: min_aspect_ratio
+  endif
 -%}
 {% assign have_slide = 0 %}
 {% assign has_collection = 0 %}
@@ -638,10 +639,10 @@ html:not(.no-js) .slideshow.slick-initialized .slideshow__slide{
 {%- endfor -%}
 <div class="{{ section.settings.setwidthout }}" data-section-id="{{ section.id }}" data-section-type="slideshow-section">
   {%- if section.blocks.size > 0 -%}
-  
+
   <div id="SlideshowWrapper-{{ section.id }}" class="slideshow-wrapper" role="region" aria-label="slideshow" aria-describedby="slideshow-info" tabindex="-1">
     {% comment %}  {% endcomment %}
-    {% if section.settings.style_section == 'style_2' %}  
+    {% if section.settings.style_section == 'style_2' %}
     <div class="slide-style-2">
     {% endif %}
     {% comment %}  {% endcomment %}
@@ -664,7 +665,7 @@ html:not(.no-js) .slideshow.slick-initialized .slideshow__slide{
         {%- assign text_alignments = block.settings.text_alignment | split: ' ' -%}
         {%- assign text_horizontal_alignment = text_alignments.first -%}
         {%- assign text_vertical_alignment = text_alignments.last | strip -%}
-        
+
         <div class="slide {% if block.settings.image2 != blank %}slideshow__slide-split {% endif %} slideshow__slide slideshow__slide--{{ block.id }}" {{ block.shopify_attributes }} style="background-color: {{ block.settings.bgwrap }};">
           {%- if block.settings.show_overlay -%}
           {%- capture bgoverlay -%}{{ block.settings.bg_overlay.red }}, {{ block.settings.bg_overlay.green }}, {{ block.settings.bg_overlay.blue }}{%- endcapture -%}
@@ -744,9 +745,9 @@ html:not(.no-js) .slideshow.slick-initialized .slideshow__slide{
           <div class="slideshow__text-wrap slideshow__text-wrap--desktop">
             <div class="slideshow__text-content slideshow__text-content--vertical-{{ text_vertical_alignment }} text-{{ text_horizontal_alignment }}">
               <div class="{{ section.settings.setwidth }}" data-aos="fade" data-aos-anchor-placement="top-bottom"  data-aos-once="true">
-                
-                <div class="d-inline-block text-{% if text_horizontal_alignment == 'right' %}left{% else %}{{text_horizontal_alignment}}{% endif %} ">
-                <ul class="list-unstyled"  >
+
+                <div class="d-inline-block">
+                <ul class="list-unstyled">
                   {%- unless block.settings.slide_toptitle == blank -%}
                   <li class="mb-2">
                     <p class="slideshow__toptitle subtop" style="color:{{ block.settings.slide_toptitle_color }}">
@@ -756,7 +757,7 @@ html:not(.no-js) .slideshow.slick-initialized .slideshow__slide{
                   {%- endunless -%}
                   {%- unless block.settings.slide_title == blank -%}
                   <li class="mb-1">
-                    <h2 class="h1 mega-title slideshow__title px-3 pt-2 pb-4" style="color:{{ block.settings.slide_title_color }}">
+                    <h2 class="h1 mega-title slideshow__title pt-2 pb-4" style="color:{{ block.settings.slide_title_color }}">
                       {{ block.settings.slide_title }}
                     </h2>
                   </li>
@@ -791,7 +792,7 @@ html:not(.no-js) .slideshow.slick-initialized .slideshow__slide{
                   when 'center center'
                     assign align = 'justify-content-center'
                   when 'right center'
-                    assign align = 'justify-content-start'
+                    assign align = 'justify-content-end'
                   when 'left bottom'
                     assign align = 'justify-content-start'
                   when 'center bottom'
@@ -800,13 +801,12 @@ html:not(.no-js) .slideshow.slick-initialized .slideshow__slide{
                     assign align = 'justify-content-start'
                   endcase
                 -%}
-                
+
                 <div class="slideshow__btn-wrapper align-items-center {{ align }}  {% if block.settings.slide_title != blank or block.settings.subheading != blank %} slideshow__btn-wrapper--push{% endif %}" >
                   {%- if show_link_button-1 -%}
                     <style>
                       .btn-theme.slideshow__btn{{ block.id }}{
                         color:{{ block.settings.color_button }};
-                        border: 1px solid {{ block.settings.color_button }};
                         background-color:{{ block.settings.bg_button }};
                       }
                       .btn-theme.slideshow__btn{{ block.id }}:hover{
@@ -845,7 +845,7 @@ html:not(.no-js) .slideshow.slick-initialized .slideshow__slide{
                     </style>
                     <div>
                     <a href="{{ block.settings.button_link }}" class="btn slideshow__btn slideshow__btn{{ block.id }} {{ block.settings.stylebtns }}">
-                      <span>{{ block.settings.button_label }} {% render 'icon-button-base' %}</span>
+                      <span>{{ block.settings.button_label }}</span>
                     </a>
                   </div>
                   {%- endif -%}
@@ -875,7 +875,7 @@ html:not(.no-js) .slideshow.slick-initialized .slideshow__slide{
                         border-color:{{ block.settings.bg_button_hover_2 }};
                         color:{{ block.settings.color_button_hover_2 }};
                         {% unless settings.enable_button_hover %}
-                          background-color:{{ block.settings.bg_button_hover_2 }}; 
+                          background-color:{{ block.settings.bg_button_hover_2 }};
                         {% endunless %}
                       }
                       .btn-outline.slideshow__btn-2{{ block.id }}::before{
@@ -899,7 +899,7 @@ html:not(.no-js) .slideshow.slick-initialized .slideshow__slide{
                     </div>
                   {%- endif -%}
                 </div>
-                
+
               </div>
               </div>
             </div>
@@ -953,7 +953,7 @@ html:not(.no-js) .slideshow.slick-initialized .slideshow__slide{
       </div>
     </div>
    {% comment %} end {% endcomment %}
-   {% if section.settings.style_section == 'style_2' %}  
+   {% if section.settings.style_section == 'style_2' %}
     </div>
    {% endif %}
    {% comment %}  {% endcomment %}
@@ -964,14 +964,14 @@ html:not(.no-js) .slideshow.slick-initialized .slideshow__slide{
       {%- case block.type -%}
       {%- when 'image' -%}
       {%- liquid
-        assign show_text = false 
-        unless block.settings.slide_title == blank and block.settings.subheading == blank 
-        assign show_text = true 
-        endunless 
-        assign show_link_button = false 
-        if block.settings.button_label != blank and block.settings.button_link != blank 
-        assign show_link_button = true 
-        endif 
+        assign show_text = false
+        unless block.settings.slide_title == blank and block.settings.subheading == blank
+        assign show_text = true
+        endunless
+        assign show_link_button = false
+        if block.settings.button_label != blank and block.settings.button_link != blank
+        assign show_link_button = true
+        endif
       -%}
       {%- if show_text or show_link_button -%}
       <div class="slideshow__text-content slideshow__text-content--mobile slideshow__text-content--mobile-{{ forloop.index0 }}" {% unless forloop.first %}style="display:none"{% endunless %} >
@@ -988,7 +988,7 @@ html:not(.no-js) .slideshow.slick-initialized .slideshow__slide{
           {%- endunless -%}
           {%- unless block.settings.subheading == blank -%}
           <div class="mega-subtitle slideshow__subtitle slideshow__subtitle--mobile mb-3" style="color:{{ block.settings.subheading_color }}">
-            {{ block.settings.subheading }} 
+            {{ block.settings.subheading }}
           </div>
           {%- endunless -%}
 
