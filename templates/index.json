@@ -572,6 +572,55 @@
         "marginmobile": "0px 0px 0px 0px"
       }
     },
+    "grid_banner_Y4VTpk": {
+      "type": "grid-banner",
+      "blocks": {
+        "banner_KcDqn7": {
+          "type": "banner",
+          "settings": {
+            "width": "12",
+            "image": "shopify://shop_images/home-footer-banner.jpg",
+            "subtitle": "Trending Styles",
+            "color_sub": "#fff5de",
+            "title": "Latest Fashion Trends in Clothing<br>That Everyone Loves",
+            "color_title": "#fff5de",
+            "size_text": "h2",
+            "description": "<p>Elevate your wardrobe with the pieces that fashion enthusiasts can't get enough of.</p>",
+            "bg_color": "#ffffff",
+            "colordef": "#fff5de",
+            "opacity_bg": 0,
+            "style_btn": "btn-theme btn-white",
+            "button_text": "View all products",
+            "button_link": "",
+            "vertical": "mid",
+            "horizontal": "center",
+            "text_align": "center"
+          }
+        }
+      },
+      "block_order": [
+        "banner_KcDqn7"
+      ],
+      "name": "Grid banner",
+      "settings": {
+        "animation": "",
+        "setwidth": "full",
+        "bgsection": "#ffffff",
+        "title_top": "",
+        "title": "",
+        "des": "",
+        "align-heading": "center",
+        "no_gutter": false,
+        "show_overlay": true,
+        "gradient_overlay": true,
+        "bg_overlay": "#434343",
+        "opacity_overlay": 0.5,
+        "paddingsection": "0px 0px 0px 0px",
+        "paddingmobile": "40px 0px 40px 0px",
+        "marginsection": "0px 0px 0px 0px",
+        "marginmobile": "0px 0px 0px 0px"
+      }
+    },
     "image_content_46cHQf": {
       "type": "image-content",
       "blocks": {
@@ -619,7 +668,7 @@
         "align_center": true,
         "paddingsection": "0px 0px 0px 0px",
         "paddingmobile": "40px 0px 40px 0px",
-        "marginsection": "0px 0px 0px 0px",
+        "marginsection": "50px 0px 50px 0px",
         "marginmobile": "0px 0px 0px 0px"
       }
     },
@@ -682,6 +731,7 @@
     "d723b982-ca8f-4804-8a63-aadb7795988f",
     "3e04d8d0-b36c-4e9e-8f16-6987ee712faa",
     "3fbc3961-b3b3-483b-9070-76e53c90c3c9",
+    "grid_banner_Y4VTpk",
     "image_content_46cHQf",
     "grid_banner_6abKqC"
   ]
