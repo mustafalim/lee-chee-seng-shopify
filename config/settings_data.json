@@ -2451,7 +2451,7 @@
           "footer_font_weight": "500",
           "footer_spacing": 0,
           "footer_typetext": "capitalize",
-          "acc_mobile": true,
+          "acc_mobile": false,
           "e_ft_currency": true,
           "enable_image": true,
           "enable_name": true,
