@@ -1,0 +1,124 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {}
+    },
+    "image_content_GhyAyL": {
+      "type": "image-content",
+      "blocks": {
+        "image_block_b3xYiM": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/home-nature-design.png"
+          }
+        },
+        "text_block_KpwjT7": {
+          "type": "text_block",
+          "settings": {
+            "width": "100%",
+            "bgtext": "#ffffff",
+            "title_color": "rgba(0,0,0,0)",
+            "subtitle": "LEE CHEE SENG",
+            "title": "Nature’s design, our Biodegradable future.",
+            "size_text": "h2",
+            "text": "<p>Lee Chee Seng Polythene Co. is a Singapore-based partnership established on 21 January 1981. The company’s primary business is the wholesale of packaging materials, serving a range of industries that need polythene and related packaging solutions. Additionally, it engages in retailing books, newspapers, and stationery as a secondary activity.</p>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu.</p>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat placerat. In iaculis arcu eros, eget tempus orci facilisis id.</p>",
+            "answer_content": "",
+            "style_btn": "btn-underline btn-underline-white",
+            "button": "discover now",
+            "link": "",
+            "enable_padding": true,
+            "align": "left"
+          }
+        }
+      },
+      "block_order": [
+        "image_block_b3xYiM",
+        "text_block_KpwjT7"
+      ],
+      "custom_css": [
+        ".image-content__image-wrapper img {border-radius: 20px;}"
+      ],
+      "name": "Image with text",
+      "settings": {
+        "animation": "",
+        "setwidth": "container",
+        "bgsection": "#ffffff",
+        "rangebg": 0,
+        "bgbefore": "rgba(0,0,0,0)",
+        "bg_pos": "left",
+        "enable_padding": true,
+        "align_center": true,
+        "paddingsection": "0px 0px 0px 0px",
+        "paddingmobile": "40px 0px 40px 0px",
+        "marginsection": "50px 0px 50px 0px",
+        "marginmobile": "0px 0px 0px 0px"
+      }
+    },
+    "image_content_tkEqBi": {
+      "type": "image-content",
+      "blocks": {
+        "text_block_B4GeL6": {
+          "type": "text_block",
+          "settings": {
+            "width": "100%",
+            "bgtext": "#ffffff",
+            "title_color": "rgba(0,0,0,0)",
+            "subtitle": "LEE CHEE SENG",
+            "title": "Lorem ipsum dolor sit amet consectetur.",
+            "size_text": "h2",
+            "text": "<p>Lee Chee Seng Polythene Co. is a Singapore-based partnership established on 21 January 1981. The company’s primary business is the wholesale of packaging materials, serving a range of industries that need polythene and related packaging solutions. Additionally, it engages in retailing books, newspapers, and stationery as a secondary activity.</p>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu.</p>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat placerat. In iaculis arcu eros, eget tempus orci facilisis id.</p>",
+            "answer_content": "",
+            "style_btn": "btn-underline btn-underline-white",
+            "button": "discover now",
+            "link": "",
+            "enable_padding": true,
+            "align": "left"
+          }
+        },
+        "image_block_PJpMf6": {
+          "type": "image_block",
+          "settings": {
+            "image": "shopify://shop_images/home-nature-design.png"
+          }
+        }
+      },
+      "block_order": [
+        "text_block_B4GeL6",
+        "image_block_PJpMf6"
+      ],
+      "custom_css": [
+        ".image-content__image-wrapper img {border-radius: 20px;}"
+      ],
+      "name": "Image with text",
+      "settings": {
+        "animation": "",
+        "setwidth": "container",
+        "bgsection": "#ffffff",
+        "rangebg": 0,
+        "bgbefore": "rgba(0,0,0,0)",
+        "bg_pos": "left",
+        "enable_padding": true,
+        "align_center": true,
+        "paddingsection": "0px 0px 0px 0px",
+        "paddingmobile": "40px 0px 40px 0px",
+        "marginsection": "50px 0px 50px 0px",
+        "marginmobile": "0px 0px 0px 0px"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_content_GhyAyL",
+    "image_content_tkEqBi"
+  ]
+}
