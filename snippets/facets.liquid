@@ -37,7 +37,7 @@
           {% comment %} Heading is the first tabbable element on filter type horizontal {% endcomment %}
           <div id="FacetsWrapperDesktop"{% if filter_type == 'horizontal' %} class="facets__wrapper"{% endif %}>
             {%- if filter_type == 'horizontal' and results.filters != empty -%}
-              <h2 class="facets__heading caption-large h5" id="verticalTitle" tabindex="-1">{{ 'products.facets.filter_by_label' | t }}</h2>
+              <div class="facets__heading caption-large" id="verticalTitle" tabindex="-1">{{ 'products.facets.filter_by_label' | t }}</div>
             {%- endif -%}
             {% comment %} Pills are right below the title for filter type vertical {% endcomment %}
             {%- if filter_type == 'vertical' -%}
@@ -85,8 +85,8 @@
             <script src="{{ 'show-more.js' | asset_url }}" defer="defer"></script>
             {%- if filter_type == 'vertical' -%}
             {%- if linklists[section.settings.link_list_head].title != blank  and section.settings.enable_list_collection -%}
-            <details id="Details-collection-{{ section.id }}" 
-              class="{% if filter_type == 'horizontal' %}disclosure-has-popup facets__disclosure{% else %} facets__disclosure-vertical{% endif %} js-filter" 
+            <details id="Details-collection-{{ section.id }}"
+              class="{% if filter_type == 'horizontal' %}disclosure-has-popup facets__disclosure{% else %} facets__disclosure-vertical{% endif %} js-filter"
               data-index="{{ collection }}"
               {% if filter_type == 'vertical' and forloop.index == 1 and first_group %} open {% elsif filter_type == 'vertical' and open_group %} open {% endif %}>
                 <summary class="facets__summary caption-large focus-offset">
@@ -102,12 +102,12 @@
                           {% assign collection_handle = link.url | split: "collections/" | last %}
                           {%- assign current_collection = collections[collection_handle] -%}
                           <li class="site-head__list__list-item ">
-                            <a  class="{% if link.current %} active {% endif %}" 
+                            <a  class="{% if link.current %} active {% endif %}"
                             href="{{ link.url }}"
                             >
                              {{ link.title }}
                               <span class="d-inline-block ml-1">({{ current_collection.all_products_count }})</span>
-                              
+
                             </a>
                           </li>
                           {%- endfor -%}
@@ -122,9 +122,9 @@
               {%- assign total_active_values = total_active_values | plus: filter.active_values.size -%}
               {% case filter.type %}
               {% when 'boolean' or 'list' %}
-              
-                <details id="Details-{{ forloop.index }}-{{ section.id }}" 
-                class="{% if filter_type == 'horizontal' %}disclosure-has-popup facets__disclosure{% else %} facets__disclosure-vertical{% endif %} js-filter" 
+
+                <details id="Details-{{ forloop.index }}-{{ section.id }}"
+                class="{% if filter_type == 'horizontal' %}disclosure-has-popup facets__disclosure{% else %} facets__disclosure-vertical{% endif %} js-filter"
                 data-index="{{ forloop.index }}"
                 {% if filter_type == 'vertical' and forloop.index == 1 and first_group %} open {% elsif filter_type == 'vertical' and open_group %} open {% endif %}>
                   <summary class="facets__summary caption-large focus-offset" aria-label="{{ filter.label }} ({{ 'products.facets.filters_selected.one' | t: count: filter.active_values.size }})">
@@ -151,11 +151,11 @@
                       if section.settings.enable_color
                         assign is_color = true
                       endif
-                      
+
                       assign styleSize = section.settings.style_size
                       assign style_color = false
                       assign style_size = false
-                       for value in filter.values 
+                       for value in filter.values
                         if value.param_name  contains 'color' or  value.param_name  contains 'colour'
                           assign style_color = true
                         endif
@@ -164,11 +164,11 @@
                         endif
                        endfor
                       -%}
-                    <fieldset class="facets-wrap parent-wrap {% if filter_type == 'vertical' %} facets-wrap-vertical {% endif %} 
-                      {% if is_color %} 
-                        {%- if style_color -%} 
-                          {{ styleColor }} 
-                          {% if typeColor %} color_c {% else %} color_q {% endif %} 
+                    <fieldset class="facets-wrap parent-wrap {% if filter_type == 'vertical' %} facets-wrap-vertical {% endif %}
+                      {% if is_color %}
+                        {%- if style_color -%}
+                          {{ styleColor }}
+                          {% if typeColor %} color_c {% else %} color_q {% endif %}
                         {%- endif -%}
                       {% endif %}
                       {% if style_size %}
@@ -209,7 +209,7 @@
                               {%- if is_color -%}
                                 {%- if value.param_name  contains 'color' or  value.param_name  contains 'colour' -%}
                                   {% comment %} {%- assign color_image = value.label | escape | handle | append: '.' | append: swatch_file_extension | asset_img_url: '50x50' | prepend: 'https:' | split: '?' | first -%} {% endcomment %}
-                                  <span class="facets_bg st-color-{{ value.label | escape | downcase }}" 
+                                  <span class="facets_bg st-color-{{ value.label | escape | downcase }}"
                                     style="background-color:{{ value.label | escape | downcase }};"></span>
                                 {%- endif -%}
                               {%- endif -%}
@@ -288,7 +288,7 @@
                   </summary>
                   <div id="Facet-{{ forloop.index }}-{{ section.id }}" class="{% if filter_type == 'horizontal' %}facets__display{% else %}facets__display-vertical{% endif %}">
                     <div class="hide {% if filter_type == 'horizontal' %}facets__header{% else %}facets__header-vertical {% endif %}">
-                      
+
                       {%- assign max_price_amount = filter.range_max | money | strip_html | escape -%}
                       <span class="facets__selected">{{ "products.facets.max_price" | t }}{{ max_price_amount }}</span>
                       {%- if filter_type != 'vertical' -%}
@@ -299,7 +299,7 @@
                         </facet-remove>
                       {%- endif -%}
                     </div>
-                    
+
                     <price-range class="facets__price flex-column">
                       <div class="sliderFilter-wrap mb-3 mt-n4">
                         <input  class="sliderFilter"
@@ -330,9 +330,9 @@
                           >
                           <label class="field__label visually-hidden" for="Filter-{{ filter.label | escape }}-GTE">{{ 'products.facets.from' | t }}</label>
                         </div>
-                        
+
                           <span class="field-currency">{{ cart.currency.symbol }}</span>
-                       
+
                         <div class="field">
                           <input class="field__input field__input_max"
                             name="{{ filter.max_value.param_name }}"
@@ -506,7 +506,7 @@
               {{ 'products.facets.filter_button' | t }}
             {%- endif -%}
           </span>
-          
+
         </span>
         <span tabindex="0" class="mobile-facets__close mobile-facets__close--no-js">{%- render 'icon-close' -%}</span>
       </summary>

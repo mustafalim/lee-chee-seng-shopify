@@ -27,26 +27,26 @@
   assign size_image_grid = settings.size_image_grid
   assign cover_contain = section.settings.cover_contain
   assign type_pagi = section.settings.type_pagination
-  assign productPerrow = section.settings.collection_perrow 
-  if productPerrow == '2' 
-    assign gridProduct = 'js-col col-sm-6 col-6' 
-  elsif productPerrow == '3' 
-    assign gridProduct = 'js-col col-sm-6 col-6 col-lg-4' 
-  elsif productPerrow == '4' 
-    assign gridProduct = 'js-col col-sm-6 col-6 col-lg-3' 
-  elsif productPerrow == '5' 
-    assign gridProduct = 'js-col col-sm-6 col-6 col-lg-2-4' 
-  elsif productPerrow == '6' 
-    assign gridProduct = 'js-col col-sm-6 col-6 col-lg-2' 
-  endif 
+  assign productPerrow = section.settings.collection_perrow
+  if productPerrow == '2'
+    assign gridProduct = 'js-col col-sm-6 col-6'
+  elsif productPerrow == '3'
+    assign gridProduct = 'js-col col-sm-6 col-6 col-lg-4'
+  elsif productPerrow == '4'
+    assign gridProduct = 'js-col col-sm-6 col-6 col-lg-3'
+  elsif productPerrow == '5'
+    assign gridProduct = 'js-col col-sm-6 col-6 col-lg-2-4'
+  elsif productPerrow == '6'
+    assign gridProduct = 'js-col col-sm-6 col-6 col-lg-2'
+  endif
 -%}
 
 <div class="section-{{ section.id }}-padding {{ section.settings.collection_width }} " data-aos="fade">
   {% comment %} Sort is the first tabbable element when filter type is vertical {% endcomment %}
   {%- if section.settings.enable_sorting and section.settings.filter_type == 'vertical' -%}
-   
+
     <facet-filters-form class="facets facets-vertical-sort small-hide no-js-hidden d-none d-lg-block">
-      
+
       <form class="facets-vertical-form {% unless section.settings.enable_filtering %} facets-disable {% endunless %} " id="FacetSortForm">
         <div class="d-flex align-items-center h-100 {% unless section.settings.enable_viewcolumn %} hide {% endunless %}">
           <span class="js-btn-view btn-view-2 {% if productPerrow == '2' %}active{% endif %}" data-col="2"></span>
@@ -91,7 +91,7 @@
                 <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
               </svg>
             </div>
-          </div>  
+          </div>
        </div>
       </form>
     </facet-filters-form>
@@ -100,8 +100,8 @@
     {{ 'component-facets.css' | asset_url | stylesheet_tag }}
     {%- if section.settings.enable_filtering or section.settings.enable_sorting -%}
       <aside aria-labelledby="verticalTitle" class=" facets-wrapper {% unless section.settings.enable_filtering %} facets-wrapper--no-filters{% endunless %}{% if section.settings.filter_type != 'vertical' %} horizontal {% else %} col-md-3 v-col {% endif %}" id="main-collection-filters" data-id="{{ section.id }}">
-        {% render 'facets', results: collection, 
-        enable_filtering: section.settings.enable_filtering, 
+        {% render 'facets', results: collection,
+        enable_filtering: section.settings.enable_filtering,
         enable_sorting: section.settings.enable_sorting,
         filter_type: section.settings.filter_type,
         first_group: section.settings.first_group,
@@ -126,16 +126,16 @@
       {%- else -%}
         <div class="collection {% if section.settings.filter_type == 'vertical' %} pt-4 {% endif %}">
           <div class="loading-overlay gradient"></div>
-  
+
           <ul id="product-grid" data-id="{{ section.id }}" class="
             grid grid--2-col product-grid row AjaxinateLoop
             {% if collection.products_count < 4 %} grid--{{ collection.products_count }}-col-tablet{% else %}
               {% if collection.products_count == 4 %} grid--4-col-desktop{% else %} grid--3-col-tablet grid--one-third-max grid--4-col-desktop grid--quarter-max{% endif %}
             {% endif %}">
             {%- for product in collection.products -%}
-              
+
               {%- if forloop.index > 2 -%}
-                
+
               {%- endif -%}
 
               <li class="grid__item {{ gridProduct }}">
@@ -156,25 +156,25 @@
                 -%}
                 {%- if numberitem <= paginate.items -%}
                   <div class="d-flex justify-content-center flex-column mb-4">
-                    
+
                       <p class="txt-body-60">
                         {{ 'general.pagination.viewed' | t: perpage: numberitem, numberitem: paginate.items }}
                       </p>
-                  
-                    
+
+
                     <div class="pagi-click mx-auto ">
                       <span class="pagi-click-percent" data-percent="{{ getpage }}" style="width:{{ getpage }}%;"></span>
                     </div>
                   </div>
               {%- endif -%}
                 {%- if paginate.next -%}
-                <a href="{{ paginate.next.url }}" class="btn btn-outline">{{ 'general.pagination.load_more' | t }}</a>
+                <a href="{{ paginate.next.url }}" class="btn btn-theme btn-white">{{ 'general.pagination.load_more' | t }}</a>
                 {%- endif -%}
               </div>
             {% when 'scroll' %}
               <div class="AjaxinatePagination text-center" data-pagination="scroll">
                 {%- if paginate.next -%}
-                <a href="{{ paginate.next.url }}" class="btn btn-outline">{{ 'general.pagination.load_more' | t }}</a>
+                <a href="{{ paginate.next.url }}" class="btn btn-theme btn-white">{{ 'general.pagination.load_more' | t }}</a>
                 {%- endif -%}
               </div>
             {% else %}
@@ -182,7 +182,7 @@
                 {% render 'pagination', paginate: paginate, anchor: '' %}
               {%- endif -%}
           {% endcase %}
-         
+
         </div>
       {%- endif -%}
     {%- endpaginate -%}
@@ -203,7 +203,7 @@
         });
       });
     }
-    
+
   {% endjavascript %}
 
 {% schema %}

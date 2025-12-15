@@ -1,20 +1,20 @@
-{%- liquid  
+{%- liquid
   assign checkImg = section.settings.show_collection_image
   assign colorH = section.settings.image_text_color
   assign colorBg = section.settings.bg_color
   assign opOverlay = section.settings.image_overlay_opacity | divided_by: 100.0
-  if collection.image != blank 
+  if collection.image != blank
   assign collectionImage = collection.image
   elsif collection.handle == 'all'
   assign collectionImage = section.settings.img_bannercollection
   endif
   assign img_height = section.settings.img_height
   assign style_banner = section.settings.style_banner
-  
+
 -%}
 
 <style>
-  
+
 .main-content{
   padding: 0;
 }
@@ -85,8 +85,9 @@
 
 </style>
 
-{%- if style_banner == 'full' -%}
-  <div class="image-content__image-wrapper d-flex align-items-center collection-hero {% if img_height != 'orginal' %} collection-hero-banner {% endif %} " {% if checkImg  and collectionImage != blank %}style="padding-top:{{ 1 | divided_by: collectionImage.aspect_ratio | times: 100 }}%;" {% endif %}>
+{%- if style_banner == 'full' or style_banner == 'boxed' -%}
+  {%- if style_banner == 'boxed' -%}<div class="container">{% endif %}
+  <div class="image-content__image-wrapper d-flex align-items-center collection-hero {% if img_height != 'orginal' %} collection-hero-banner {% endif %}" {% if checkImg  and collectionImage != blank %}style="padding-top:{{ 1 | divided_by: collectionImage.aspect_ratio | times: 100 }}%;" {% endif %}>
     {%- if checkImg  and collectionImage != blank -%}
       {% assign img_url = collectionImage | image_url: width: 1 | replace: 'width=1', 'width={width}' %}
       <img class="image-content__image lazyload scale-in"
@@ -112,6 +113,7 @@
       </div>
     </div>
   </div>
+  {%- if style_banner == 'boxed' -%}</div>{% endif %}
 {%- else -%}
 <style>
 .mbanner-left{
@@ -169,7 +171,7 @@
         {% assign collection_handle = link.url | split: "collections/" | last %}
         {%- assign current_collection = collections[collection_handle] -%}
         <li class="site-head__list__list-item list-inline-item">
-          <a href="{{ link.url }}" {% if link.current %} class="active" {% endif %}>{{ link.title }}  
+          <a href="{{ link.url }}" {% if link.current %} class="active" {% endif %}>{{ link.title }}
             {%- if section.settings.enable_count -%}
             <span class="d-inline-block ml-1 txt-body-50">({{ current_collection.all_products_count }})</span>
             {%- endif -%}
@@ -218,6 +220,10 @@
         {
           "value": "split",
           "label": "Banner Split"
+        },
+        {
+          "value": "boxed",
+          "label": "Boxed"
         }
       ],
       "default": "full"
@@ -250,6 +256,10 @@
         {
           "value": "orginal",
           "label": "Original Image"
+        },
+        {
+          "value": "200px",
+          "label": "200px"
         },
         {
           "value": "250px",
