@@ -2441,21 +2441,21 @@
               "title": "",
               "text": "we specializes in disposable packaging and party ware, also provide delivery and wholesale services to the food industry.",
               "show_social": true,
-              "width": "25%"
+              "width": "33%"
             }
           },
           "0c325a8d-bfb1-450c-a284-90ce9f9f9ee5": {
             "type": "menu",
             "settings": {
-              "link_list": "",
-              "width": "25%"
+              "link_list": "footer-products-menu",
+              "width": "20%"
             }
           },
           "02938bc4-37e0-4199-a42d-5120a9cb648f": {
             "type": "menu",
             "settings": {
-              "link_list": "",
-              "width": "25%"
+              "link_list": "footer-quick-links-menu",
+              "width": "20%"
             }
           },
           "dbb31813-2c26-4013-a98e-fe9a3fb8a781": {
@@ -2475,6 +2475,9 @@
           "0c325a8d-bfb1-450c-a284-90ce9f9f9ee5",
           "02938bc4-37e0-4199-a42d-5120a9cb648f",
           "dbb31813-2c26-4013-a98e-fe9a3fb8a781"
+        ],
+        "custom_css": [
+          "@media screen and (min-width: 750px) {.rte-setting {max-width: 300px; }}"
         ],
         "settings": {
           "setwidth": "container",
