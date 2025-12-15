@@ -83,7 +83,7 @@
       ],
       "settings": {
         "animation": "",
-        "setwidth": "full",
+        "setwidth": "container",
         "bgsection": "#ffffff",
         "title_top": "",
         "title": "",
@@ -96,88 +96,6 @@
         "opacity_overlay": 0.4,
         "paddingsection": "30px 0px 0px 0px",
         "paddingmobile": "40px 0px 40px 0px",
-        "marginsection": "0px 0px 0px 0px",
-        "marginmobile": "0px 0px 0px 0px"
-      }
-    },
-    "430d67f1-2a0b-4500-81eb-2bd7276f92ad": {
-      "type": "featured-collections-1",
-      "blocks": {
-        "0b74bde9-fb76-4d98-aaae-fc807e6f171f": {
-          "type": "collection",
-          "settings": {
-            "collection": "frontpage",
-            "icon": ""
-          }
-        },
-        "13aba3f0-7305-4cc6-959e-23f07d16c852": {
-          "type": "collection",
-          "settings": {
-            "collection": "women",
-            "icon": ""
-          }
-        },
-        "template--19803510538560__430d67f1-2a0b-4500-81eb-2bd7276f92ad-1688610004822568a8-2": {
-          "type": "collection",
-          "settings": {
-            "collection": "jewellery",
-            "icon": ""
-          }
-        },
-        "template--19803510538560__430d67f1-2a0b-4500-81eb-2bd7276f92ad-1688610004822568a8-0": {
-          "type": "collection",
-          "settings": {
-            "collection": "outerwear",
-            "icon": ""
-          }
-        },
-        "da799991-c205-4b0b-b14c-7454b5dd99cd": {
-          "type": "collection",
-          "settings": {
-            "collection": "shoes",
-            "icon": ""
-          }
-        },
-        "template--19803510538560__430d67f1-2a0b-4500-81eb-2bd7276f92ad-1688610004822568a8-1": {
-          "type": "collection",
-          "settings": {
-            "collection": "glasses",
-            "icon": ""
-          }
-        }
-      },
-      "block_order": [
-        "0b74bde9-fb76-4d98-aaae-fc807e6f171f",
-        "13aba3f0-7305-4cc6-959e-23f07d16c852",
-        "template--19803510538560__430d67f1-2a0b-4500-81eb-2bd7276f92ad-1688610004822568a8-2",
-        "template--19803510538560__430d67f1-2a0b-4500-81eb-2bd7276f92ad-1688610004822568a8-0",
-        "da799991-c205-4b0b-b14c-7454b5dd99cd",
-        "template--19803510538560__430d67f1-2a0b-4500-81eb-2bd7276f92ad-1688610004822568a8-1"
-      ],
-      "settings": {
-        "animation": "",
-        "setwidth": "container",
-        "bgsection": "#ffffff",
-        "title_top": "",
-        "title": "Shop By Categories",
-        "des": "",
-        "align-heading": "left",
-        "size_image": "square",
-        "style_item": "top",
-        "rows": "1",
-        "show": 5,
-        "radius": 50,
-        "space": 15,
-        "size_text": "h4",
-        "show_count": false,
-        "button_text": "",
-        "enable_carousel": true,
-        "arrows": false,
-        "draggable": true,
-        "dots": false,
-        "infinite": true,
-        "paddingsection": "60px 0px 60px 0px",
-        "paddingmobile": "0px 0px 0px 0px",
         "marginsection": "0px 0px 0px 0px",
         "marginmobile": "0px 0px 0px 0px"
       }
@@ -240,7 +158,7 @@
     "featured_products_jYiKEf": {
       "type": "featured-products",
       "custom_css": [
-        ".product-card__type {color: #D2232A;}"
+        ".product-card__type {color: #d2232a;}"
       ],
       "name": "Product Grid",
       "settings": {
@@ -417,7 +335,6 @@
   },
   "order": [
     "e5c3925a-90b4-4044-a9e2-99b838b4f9e2",
-    "430d67f1-2a0b-4500-81eb-2bd7276f92ad",
     "image_content_FJUQxf",
     "featured_products_jYiKEf",
     "grid_banner_Y4VTpk",
