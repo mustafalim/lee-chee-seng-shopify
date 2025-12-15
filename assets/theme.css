@@ -7516,6 +7516,7 @@ body.modal--is-active {
 .image-content__image-wrapper {
   display: block;
   margin: 0 auto;
+  background-color: #D9D9D9;
 }
 .image-content__image-wrapper img {
   position: absolute;

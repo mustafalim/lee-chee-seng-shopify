@@ -74,6 +74,7 @@
     "main_linklist": "header-menu",
     "lang_enable": false,
     "currency_enable": false,
+    "enable_breadcrumb": true,
     "enable_post": false,
     "enable_article": false,
     "enable_collection": true,
