@@ -13,6 +13,54 @@
       "type": "main-page",
       "settings": {}
     },
+    "map_with_text_FDhAWA": {
+      "type": "map-with-text",
+      "blocks": {
+        "map_block_cnXrLV": {
+          "type": "map_block",
+          "settings": {
+            "map_code": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.7195350353873!2d103.72853747571232!3d1.344706361590808!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da101feba8aab7%3A0xd8506e79a33fe730!2sLee%20Chee%20Seng%20Polythene%20Co.!5e0!3m2!1sen!2sid!4v1765815039605!5m2!1sen!2sid\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>"
+          }
+        },
+        "text_block_y6Lbmj": {
+          "type": "text_block",
+          "settings": {
+            "width": "100%",
+            "bgtext": "#e4d2c0",
+            "title_color": "rgba(0,0,0,0)",
+            "subtitle": "CONTACT US",
+            "title": "Got any questions?Lets Talk!",
+            "size_text": "h2",
+            "text": "<p>Embrace the allure of timeless fashion with our collection of modern classics. From\nessential basics to statement pieces, redefine elegance with a contemporary touch.</p>",
+            "answer_content": "",
+            "style_btn": "btn-underline btn-underline-white",
+            "button": "",
+            "link": "",
+            "enable_padding": true,
+            "align": "left"
+          }
+        }
+      },
+      "block_order": [
+        "map_block_cnXrLV",
+        "text_block_y6Lbmj"
+      ],
+      "name": "Map with text",
+      "settings": {
+        "animation": "",
+        "setwidth": "container",
+        "bgsection": "#ffffff",
+        "rangebg": 0,
+        "bgbefore": "transparent",
+        "bg_pos": "left",
+        "enable_padding": false,
+        "align_center": true,
+        "paddingsection": "0px 0px 0px 0px",
+        "paddingmobile": "40px 0px 40px 0px",
+        "marginsection": "0px 0px 0px 0px",
+        "marginmobile": "0px 0px 0px 0px"
+      }
+    },
     "fb754d90-39ba-47df-8255-8b3096ae9437": {
       "type": "service",
       "blocks": {
@@ -107,6 +155,7 @@
   },
   "order": [
     "main",
+    "map_with_text_FDhAWA",
     "fb754d90-39ba-47df-8255-8b3096ae9437",
     "863c2be4-cbba-4ba1-ba39-64e0fe639fc6"
   ]
