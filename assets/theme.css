@@ -2131,7 +2131,7 @@ input.spr-summary-actions-newreview:hover {
   color:white;
 }
 .btn-theme.btn-dark {
-  background: #B18B64;
+  background: #947659;
   color: #ffffff;
 }
 .btn-theme.btn-white,
@@ -3616,7 +3616,6 @@ blockquote cite {
 }
 .article__photo-container {
   position: relative;
-  margin-bottom: 10px;
 }
 .article__photo-wrapper img {
   position: absolute;
