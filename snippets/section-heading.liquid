@@ -19,11 +19,11 @@
   {%- endif -%}
 
   {%- if section.settings.title != blank -%}
-  <h3 class="section-title-1  {% if section.settings.des != blank %} mb-2 {% else %} mb-5 {% endif %}" data-aos="{{ section.settings.animation }}" data-aos-duration="500">
+  <h2 class="{% if section.settings.des != blank %} mb-2 {% else %} mb-5 {% endif %}" data-aos="{{ section.settings.animation }}" data-aos-duration="500">
     <span>{{ section.settings.title }}</span>
-  </h3>
+  </h2>
   {%- endif -%}
-  
+
   {%- if section.settings.des != blank -%}
   <div class="font-family-2 des-header txt-body-70 {% if section.settings.button_header_text != blank %} mb-4{% else %} mb-5{% endif %}" data-aos="{{ section.settings.animation }}" data-aos-duration="800">{{ section.settings.des }}</div>
   {%- endif -%}

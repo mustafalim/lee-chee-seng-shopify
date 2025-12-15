@@ -1,6 +1,6 @@
 <!-- faq-accordion.liquid -->
 <style>
-   .customstyle{{ section.id }}{ 
+   .customstyle{{ section.id }}{
       position: relative;
       z-index: {{ section.settings.zindex }};
       background-position:{{ section.settings.e_pos }} !important;
@@ -18,7 +18,7 @@
         cursor: pointer;
         position: relative;
         padding-right: 60px;
-        
+
     }
     .faq-heading{
       padding-top:1.25rem;
@@ -52,15 +52,19 @@
       padding-bottom: 1.5rem;
     }
 </style>
-  <section class="customstyle{{ section.id }}  lazyload " 
-  data-aos="{{ section.settings.animation }}"  
+  <section class="customstyle{{ section.id }}  lazyload "
+  data-aos="{{ section.settings.animation }}"
   data-bgset="{% render 'bgset', image: section.settings.image_bg %}"
   data-sizes="auto"
-  data-parent-fit="cover" 
+  data-parent-fit="cover"
   >
   {%- render 'style-section' -%}
     <div class="{{ section.settings.setwidth }}">
-        {%- render 'section-heading' -%}
+        <div class="row {% if section.settings.e_reverse %} flex-row-reverse {% endif %} justify-content-center">
+          <div class="col-lg-9">
+            {%- render 'section-heading' -%}
+          </div>
+        </div>
         <div class="row {% if section.settings.e_reverse %} flex-row-reverse {% endif %} justify-content-center">
           {%- if section.settings.e_small == true -%}
               <div class="col-lg-9">
@@ -92,14 +96,14 @@
                                 </div>
                             </div>
                         </div>
-                    
+
                     {%- endfor -%}
                 </div>
                 {%- endif -%}
             </div>
             {% if section.settings.e_right %}
             <div class="col-12 col-md-6" data-aos="{{ section.settings.animation }}" data-aos-duration="800">
-                
+
                 {%- if section.settings.image_right == blank -%}
                 {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
                 {%- else -%}
@@ -119,7 +123,7 @@
                     </div>
                 </div>
               {%- endif -%}
-              
+
             </div>
             {%- endif -%}
             {%- if section.settings.e_small -%}
@@ -132,7 +136,7 @@
         {%- endif -%}
     </div>
   </section>
-  
+
   {% schema %}
 {
   "name": "Faqs Accordion",
@@ -526,4 +530,3 @@
   ]
 }
 {% endschema %}
-  
