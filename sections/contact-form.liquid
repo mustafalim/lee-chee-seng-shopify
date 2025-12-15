@@ -74,22 +74,22 @@
               <label class="form__label field__label" for="ContactForm-body">{{ 'contact.form.message' | t }}</label>
             </div>
             <div class="contact__button text-center">
-              <button type="submit" class="button btn btn-theme">
-                  {{ 'contact.form.send' | t }}  <i class="ml-1 small icon-arrow-right"></i>
+              <button type="submit" class="button btn btn-theme btn-white" style="color: #FFFFFF">
+                  SUBMIT
               </button>
             </div>
-            
+
                 {%- if section.settings.answer_content != blank -%}
                     <div class="mt-5 text-center">
                     {{ section.settings.answer_content }}
                 </div>
                 {%- endif -%}
-            
+
           {%- endform -%}
         </div>
     </div>
-    
-    
+
+
   </div>
 </div>
 

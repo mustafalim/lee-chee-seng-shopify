@@ -161,6 +161,7 @@
     "padding_vertical_btn": 13,
     "padding_hoz_btn": 25,
     "height_border_btn": 1,
+    "input_border": "#2b2b2b",
     "input_height": 50,
     "input_round": 5,
     "cartdraw": true,
