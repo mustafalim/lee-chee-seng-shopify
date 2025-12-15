@@ -2130,6 +2130,10 @@ input.spr-summary-actions-newreview:hover {
   border-color:white;
   color:white;
 }
+.btn-theme.btn-dark {
+  background: #B18B64;
+  color: #ffffff;
+}
 .btn-theme.btn-white,
 .shopify-payment-button .btn-white.shopify-payment-button__button--unbranded,
 .btn-white.spr-summary-actions-newreview,
@@ -2159,6 +2163,7 @@ input.spr-summary-actions-newreview:hover {
   background:rgba(var(--g-color-heading-rgb),0.05);
 }
 .btn-theme.btn-white:hover,
+.btn-theme.btn-dark:hover,
 .shopify-payment-button
   .btn-white.shopify-payment-button__button--unbranded:hover,
 .btn-white.spr-summary-actions-newreview:hover,
