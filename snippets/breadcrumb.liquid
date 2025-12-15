@@ -5,20 +5,20 @@
   assign enable_collection = settings.enable_collection
   assign enable_product = settings.enable_product
   assign listObject = settings.page_breadcrumb | split: ','
-  
-  unless enable_post 
+
+  unless enable_post
     assign blog_page = 'blog'
-  endunless 
-  unless enable_article 
+  endunless
+  unless enable_article
     assign article_page = 'article'
-  endunless 
-  unless enable_collection 
+  endunless
+  unless enable_collection
     assign collection_page = 'collection'
-  endunless 
-  unless enable_product 
+  endunless
+  unless enable_product
     assign product_page = 'product'
-  endunless 
-  
+  endunless
+
   if listObject contains page_handle
     assign showBreadcrumb = false
   else
@@ -37,6 +37,7 @@
     margin:0;
     background:{{ settings.bg_breadcrumb }};
     border-top:1px solid {{ settings.border_breadcrumb }};
+    text-transform: uppercase;
   }
   .g-breadcrumb a,.g-breadcrumb span{padding:0 3px;font-size:14px;line-height:20px;display:inline-block;}
   .g-breadcrumb a{
