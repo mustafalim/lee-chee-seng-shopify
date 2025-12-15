@@ -35,7 +35,7 @@
   {{ product.price | money }}
   <s class="product-card__regular-price">{{ product.compare_at_price | money }}</s>
   <span class="visually-hidden">{{ 'products.product.sale_price' | t }}</span>
- 
+
   {%- endif -%}
   {%- else -%}
   {%- if product.price_varies -%}
@@ -55,7 +55,7 @@
 {% endcapture %}
 {%- liquid
   assign item = settings.productgrid
-  if enable_edit_item 
+  if enable_edit_item
     assign item = select_item
   else
     assign item = settings.productgrid
@@ -96,12 +96,12 @@
           <span>{{ 'products.product.compare_text' | t }}</span>
         </span>
         {%- endif -%}
-        <span data-tooltip="true" data-placement="left" class="btn btn-theme gradient-theme-vertical product-card__overlay-btn js-grid-cart {% unless product.available %} disabled {% endunless %}" 
+        <span data-tooltip="true" data-placement="left" class="btn btn-theme gradient-theme-vertical product-card__overlay-btn js-grid-cart {% unless product.available %} disabled {% endunless %}"
           {% if product.available %}
-            title="{{ 'products.product.add_to_cart' | t }}" 
+            title="{{ 'products.product.add_to_cart' | t }}"
           {% else %}
-            title="{{ 'products.product.sold_out' | t }}" 
-          {% endif %} 
+            title="{{ 'products.product.sold_out' | t }}"
+          {% endif %}
           data-id="{{ product.selected_or_first_available_variant.id }}">
           {%- render 'icon-cart' -%}
             <div class="product-card__loading spinner-{{ settings.loading }}" role="status"></div>
@@ -125,7 +125,7 @@
 
 
 
-  {%- when 'product-2' -%} 
+  {%- when 'product-2' -%}
   {%- comment -%} product-grid-2.liquid {%- endcomment -%}
 <div class="product-card js-product-card product-card--style2 text-left" data-price="{{ product.price }}">
   <div class="product-card__image-wr">
@@ -145,13 +145,13 @@
     {{ vendor }}
     {{ review }}
     <div class="product-form__item product-form__item--submit d-flex justify-content-end-lg flex-row align-items-center">
-      <span class="py-3 js-grid-cart d-inline-flex align-items-center {% unless product.available %} disabled{% endunless %}" 
-        title="{{ 'products.product.add_to_cart' | t }}" 
+      <span class="py-3 js-grid-cart d-inline-flex align-items-center {% unless product.available %} disabled{% endunless %}"
+        title="{{ 'products.product.add_to_cart' | t }}"
         data-id="{{ product.selected_or_first_available_variant.id }}">
         <div class="product-card__loading spinner-{{ settings.loading }}" role="status"></div>
         {%- render 'icon-cart-product' -%}
         <span class="mx-2 fz-n3 text-uppercase">{% if product.available %}{{ 'products.product.add_to_cart' | t }} {% else %} {{ 'products.product.sold_out' | t }} {% endif %}</span>
-       
+
       </span>
       <div class="service-product-2 d-inline-flex align-items-center">
         {%- if settings.qv_box -%}
@@ -184,7 +184,7 @@
        </span>
        {%- endif -%}
      </div>
-      
+
     </div>
   </div>
 </div>
@@ -210,9 +210,9 @@
     {{ price }}
     {%- render 'swatch-grid-1', product : product -%}
     <div class="product-card__overlay d-flex justify-content-center flex-row">
-     
-      <span class="btn btn-theme product-card__overlay-btn js-grid-cart {% unless product.available %} disabled{% endunless %}" 
-        title="{{ 'products.product.add_to_cart' | t }}" data-toggle="tooltip" data-placement="top"  
+
+      <span class="btn btn-theme product-card__overlay-btn js-grid-cart {% unless product.available %} disabled{% endunless %}"
+        title="{{ 'products.product.add_to_cart' | t }}" data-toggle="tooltip" data-placement="top"
         data-id="{{ product.selected_or_first_available_variant.id }}">
         {%- render 'icon-cart' -%}
         <div class="product-card__loading spinner-{{ settings.loading }}" role="status"></div>
@@ -234,7 +234,7 @@
         {%- endif -%}
       </span>
       {%- endif -%}
-      
+
       {%- if settings.enable_wishlsit -%}
         <span data-toggle="tooltip" data-placement="top" data-tooltipalltimes="true" class="btn btn-theme product-card__overlay-btn js-btn-wishlist" title="{{ 'products.product.wishlist_text' | t }}" data-handle="{{ product.handle }}">
           {%- render 'icon-heart-2' -%}
@@ -254,7 +254,7 @@
 
 
 
-  {%- when 'product-4' -%} 
+  {%- when 'product-4' -%}
   {% comment %} product-grid-4.liquid {% endcomment %}
 <div class="product-card js-product-card product-card--style1 product-card--style4" data-price="{{ product.price }}">
   <div class="product-card__image-wr overflow-hidden">
@@ -295,7 +295,7 @@
           {%- else -%}
             {{ 'products.product.sold_out' | t }}
           {%- endif -%}
-          
+
         </span>
         <div class="product-card__loading spinner-{{ settings.loading }}" role="status"></div>
         </span>
@@ -368,7 +368,7 @@
 
 
 
-  {%- when 'product-6' -%} 
+  {%- when 'product-6' -%}
   <!-- product-grid-6.liquid -->
 <div class="product-card js-product-card product-card--style1 product-card--style6" data-price="{{ product.price }}">
   <div class="product-card__image-wr overflow-hidden">
@@ -379,7 +379,7 @@
       {%- render 'icon-heart-2' -%}
     </span>
     {%- endif -%}
-    
+
     {%- if settings.qv_box -%}
     <span data-tooltip="true" data-placement="top" class="btn btn-theme gradient-theme-vertical product-card__overlay-btn js-btn-quickview" title="{{ 'products.product.quickview_text' | t }}" data-toggle="modal" data-target="#jsQuickview" data-handle="{{ product.handle }}" data-pavailable="{% if product.available %}true{% else %}false{% endif %}">
       {%- render 'icon-view' -%}
@@ -428,27 +428,27 @@
 
 
 
-  {%- when 'product-7' -%} 
+  {%- when 'product-7' -%}
   <div class="product-card js-product-card product-card--style7" data-price="{{ product.price }}" >
     <div class="product-card__image-wr overflow-hidden">
       {{ image_product }}
       {%- if settings.enable_wishlsit -%}
       <span  class="btn btn-theme product-card__overlay-btn js-btn-wishlist" title="{{ 'products.product.wishlist_text' | t }}"
-        data-toggle="tooltip" data-placement="left" 
+        data-toggle="tooltip" data-placement="left"
         data-handle="{{ product.handle }}">
         {%- render 'icon-heart-2' -%}
       </span>
       {%- endif -%}
       <div class="product-card__overlay d-flex justify-content-center flex-column">
-        <span class="btn product-card__overlay-btn js-grid-cart {% unless product.available %} disabled{% endunless %}" 
-          title="{{ 'products.product.add_to_cart' | t }}" data-toggle="tooltip" data-placement="left"  
+        <span class="btn product-card__overlay-btn js-grid-cart {% unless product.available %} disabled{% endunless %}"
+          title="{{ 'products.product.add_to_cart' | t }}" data-toggle="tooltip" data-placement="left"
           data-id="{{ product.selected_or_first_available_variant.id }}">
           {%- render 'icon-cart' -%}
           <div class="product-card__loading spinner-{{ settings.loading }}" role="status"></div>
           <span>{{ 'products.product.add_to_cart' | t }}</span>
         </span>
         {%- if settings.qv_box -%}
-        <span  class="btn js-btn-quickview product-card__overlay-btn" data-toggle="modal" 
+        <span  class="btn js-btn-quickview product-card__overlay-btn" data-toggle="modal"
           data-target="#jsQuickview" data-handle="{{ product.handle }}"
           data-pavailable="{% if product.available %}true{% else %}false{% endif %}"
            >
@@ -516,9 +516,9 @@
       {{ price }}
       {%- render 'swatch-grid-1', product : product -%}
       <div class="product-card__overlay d-flex justify-content-center flex-row">
-      
-        <span class="btn btn-theme product-card__overlay-btn js-grid-cart {% unless product.available %} disabled{% endunless %}" 
-          title="{{ 'products.product.add_to_cart' | t }}" data-toggle="tooltip" data-placement="top"  
+
+        <span class="btn btn-theme product-card__overlay-btn js-grid-cart {% unless product.available %} disabled{% endunless %}"
+          title="{{ 'products.product.add_to_cart' | t }}" data-toggle="tooltip" data-placement="top"
           data-id="{{ product.selected_or_first_available_variant.id }}">
           {%- render 'icon-cart' -%}
           <div class="product-card__loading spinner-{{ settings.loading }}" role="status"></div>
@@ -540,7 +540,7 @@
             {%- endif -%}
         </span>
         {%- endif -%}
-        
+
         {%- if settings.enable_wishlsit -%}
           <span data-toggle="tooltip" data-placement="top" data-tooltipalltimes="true" class="btn btn-theme product-card__overlay-btn js-btn-wishlist" title="{{ 'products.product.wishlist_text' | t }}" data-handle="{{ product.handle }}">
             {%- render 'icon-heart-2' -%}
@@ -597,15 +597,15 @@
             <span>{{ 'products.product.compare_text' | t }}</span>
           </span>
           {%- endif -%}
-          
+
         </div>
         <div class="product-card-cart">
-          <span  class="btn btn-theme js-grid-cart w-100 {% unless product.available %} disabled {% endunless %}" 
+          <span class="btn btn-theme js-grid-cart w-100 {% unless product.available %} disabled {% endunless %}"
             {% if product.available %}
-              title="{{ 'products.product.add_to_cart' | t }}" 
+              title="{{ 'products.product.add_to_cart' | t }}"
             {% else %}
-              title="{{ 'products.product.sold_out' | t }}" 
-            {% endif %} 
+              title="{{ 'products.product.sold_out' | t }}"
+            {% endif %}
             data-id="{{ product.selected_or_first_available_variant.id }}">
               <div class="product-card__loading spinner-{{ settings.loading }}" role="status"></div>
               <span>
@@ -613,7 +613,7 @@
                   {{ 'products.product.add_to_cart' | t }}
                 {% else %}
                   {{ 'products.product.sold_out' | t }}
-                {% endif %} 
+                {% endif %}
               </span>
           </span>
         </div>
@@ -623,7 +623,7 @@
           endif
         -%}
       </div>
-      <div class="product-card__info text-left">
+      <div class="product-card__info text-center">
         {{ vendor }}
         <a href="{{ product.url | within: collection }}" title="{{ product.title }}" class=" d-block product-card__name {% if settings.t_product %} text-uppercase {% endif %}">{{ product.title }}</a>
         {{ review }}
@@ -670,9 +670,9 @@
               <span>{{ 'products.product.compare_text' | t }}</span>
             </span>
             {%- endif -%}
-            
+
           </div>
-          
+
           {%- liquid
             if settings.enable_countdown_card
               render 'product-countdown', product : product
@@ -686,12 +686,12 @@
           {% render 'swatch-grid-1', product: product %}
           <div class="product-card-cart mt-2 position-relative">
             {{ price }}
-            <span  class="fz-n2 text-uppercase js-grid-cart  {% unless product.available %} disabled {% endunless %}" 
+            <span  class="fz-n2 text-uppercase js-grid-cart  {% unless product.available %} disabled {% endunless %}"
               {% if product.available %}
-                title="{{ 'products.product.add_to_cart' | t }}" 
+                title="{{ 'products.product.add_to_cart' | t }}"
               {% else %}
-                title="{{ 'products.product.sold_out' | t }}" 
-              {% endif %} 
+                title="{{ 'products.product.sold_out' | t }}"
+              {% endif %}
               data-id="{{ product.selected_or_first_available_variant.id }}">
                 <div class="product-card__loading spinner-{{ settings.loading }}" role="status"></div>
                 <span>
@@ -699,7 +699,7 @@
                     {{ 'products.product.add_to_cart' | t }}
                   {% else %}
                     {{ 'products.product.sold_out' | t }}
-                  {% endif %} 
+                  {% endif %}
                 </span>
             </span>
           </div>
