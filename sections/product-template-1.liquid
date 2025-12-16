@@ -146,7 +146,7 @@
     font-size: calc(var(--g-font-size) + 1px);
     padding: 16px 18px 16px 0;
     position: relative;
-    border-bottom: 1px solid var( --g-input-border);
+    border-bottom: 0.8px solid #DEE2E6;
     cursor: pointer;
   }
   .tabcustom i{
@@ -206,7 +206,7 @@
     margin: 0 0 0.5rem;
   }
   .product-single__meta hr{
-    margin:0 0 1.5rem;
+    margin: 0;
   }
   .product-single__meta .product-title + .product-single__meta-list{
     margin:0 0 0.5rem;
@@ -223,13 +223,15 @@
   .product-single__meta .fake-view + .product__text{
     margin:-1rem 0 1.5rem ;
   }
-   .product-single__meta .shopify-block + .product-short__description{
+  .product-single__meta .shopify-block + .product-short__description{
     margin-top: -0.7rem;
-   }
+  }
+  .product-single__meta .product-single__information {
+    text-transform: uppercase;
+  }
   .product-title .product-label{
     position: static;
     transform:none;
-    
   }
   .product-title .product-label .product-tag--absolute{
     margin-bottom: 0.75rem !important;
@@ -239,7 +241,7 @@
   .photos__item--thumbs{
     padding:0 0px 24px;
   }
-  .product-single__video iframe,.product-single__video video,.product-single__video model-viewer{ 
+  .product-single__video iframe,.product-single__video video,.product-single__video model-viewer{
     position: absolute;
     width: 100%;
     top:0;
@@ -293,7 +295,7 @@
     display: flex;
     flex-direction: row;
     column-gap: 1rem;
-    
+
   }
   .product-countdown .js-countdown ul li{
     line-height: 1;
@@ -366,13 +368,13 @@
     }
   }
 </style>
-<div class="{{ section.settings.setwidth }} js-recently-view" itemscope itemtype="http://schema.org/Product" id="ProductSection-{{ section.id }}" 
-  data-id="{{ section.settings.media_style }}" 
-  data-section-id="{{ section.id }}" 
-  data-section-type="product" 
-  data-enable-history-state="true" 
-  data-ajax="true" 
-  data-stock="{{ section.settings.stock_enable }}" 
+<div class="{{ section.settings.setwidth }} js-recently-view" itemscope itemtype="http://schema.org/Product" id="ProductSection-{{ section.id }}"
+  data-id="{{ section.settings.media_style }}"
+  data-section-id="{{ section.id }}"
+  data-section-type="product"
+  data-enable-history-state="true"
+  data-ajax="true"
+  data-stock="{{ section.settings.stock_enable }}"
   data-handle="{{ product.handle }}"
   data-autoplay="{{ section.settings.e_autoplay }}"
   data-videoloop="{{ section.settings.e_loop }}">
@@ -380,18 +382,18 @@
     assign current_variant = product.selected_or_first_available_variant
     assign left_size = 'col-md-6 col-12'
     assign right_size = 'col-md-6 col-12'
-    case section.settings.media_size 
-    when 'small' 
+    case section.settings.media_size
+    when 'small'
     assign left_size = 'col-md-5 col-12'
     assign right_size = 'col-md-7 col-12'
-    when 'normal' 
+    when 'normal'
     assign left_size = 'col-md-6 col-12'
     assign right_size = 'col-md-6 col-12'
-    when 'large' 
+    when 'large'
     assign left_size = 'col-md-7 col-12'
     assign right_size = 'col-md-5 col-12'
     endcase
-    assign featured_img = current_variant.featured_image | default: product.featured_image 
+    assign featured_img = current_variant.featured_image | default: product.featured_image
 
     assign media_style = section.settings.media_style
   -%}
@@ -401,15 +403,15 @@
   <meta itemprop="brand" content="{{ product.vendor }}">
 
   <div class="row product-single">
-    <div class="{{ left_size }} 
-      {% unless media_style == 'media-list' or media_style == 'media-grid' or media_style == 'media-collage-1' or media_style == 'media-collage-2' %} 
-      photos-sticky 
+    <div class="{{ left_size }}
+      {% unless media_style == 'media-list' or media_style == 'media-grid' or media_style == 'media-collage-1' or media_style == 'media-collage-2' %}
+      photos-sticky
     {% endunless %}">
     {% render 'product-media', product : product, featured_image: featured_img, image_size: section.settings.image_size, loop: section.settings.enable_video_looping, media_style: section.settings.media_style %}
     </div>
-    <div class="{{ right_size }} order-1 
-      {% if  media_style == 'media-list' or media_style == 'media-grid' or media_style == 'media-collage-1' or media_style == 'media-collage-2' %} 
-      photos-sticky 
+    <div class="{{ right_size }} order-1
+      {% if  media_style == 'media-list' or media_style == 'media-grid' or media_style == 'media-collage-1' or media_style == 'media-collage-2' %}
+      photos-sticky
       {% endif %}" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
       <div class="product-single__info-wrapper">
         <meta itemprop="priceCurrency" content="{{ shop.currency }}">
@@ -455,6 +457,7 @@
               </div>
               {%- else -%}
               <div class="product-block product-single__description" itemprop="description">
+                <h3>Description</h3>
                 {{ product.description }}
               </div>
               {%- endif -%}
@@ -486,8 +489,8 @@
                 <li>
                   {% capture txtupper %}{% if settings.txtuppercase %}text-uppercase {% endif %}{% endcapture %}
                   <div class="d-inline-block hide product-tag product-tag-sale product-tag--absolute {{ txtupper }} {{ settings.tagsale }}" aria-hidden="true" style="background-color: {{ settings.sale_label_bg_product }};color:{{ settings.sale_label_cl_product }}">
-                    {%- liquid 
-                      if product.first_available_variant.compare_at_price 
+                    {%- liquid
+                      if product.first_available_variant.compare_at_price
                           assign s =  product.first_available_variant.compare_at_price | minus: product.first_available_variant.price | times: 100
                           assign f =  product.first_available_variant.compare_at_price
                           assign sale_percent = s | divided_by: f
@@ -495,13 +498,13 @@
                           assign sale_percent = product.compare_at_price_max | minus: product.price | times: 100 | divided_by: product.compare_at_price_max
                       endif
                   -%}
-                    
+
                       {%- if settings.tagsale == 'percent' -%}
                           -{{ sale_percent | append: '%' }}
                       {%- elsif settings.tagsale == 'txt' -%}
                           {{ settings.sale_label_text | default: 'on sale' }}
                       {%- else -%}
-                      {{ settings.sale_label_text | default: 'on sale' }} <span class="product-tag-sale-number">{{ sale_percent | append: '%' }} </span> 
+                      {{ settings.sale_label_text | default: 'on sale' }} <span class="product-tag-sale-number">{{ sale_percent | append: '%' }} </span>
                       {%- endif -%}
                   </div>
                   </li>
@@ -530,7 +533,7 @@
                 {% endcase %}
                 {{ block.settings.free_word }}
               </div>
-            {%- when 'buttons' -%} 
+            {%- when 'buttons' -%}
             <div class="product-button-variant product-block">
               {% if product.metafields.info.affiliate_link != blank %}{% comment %}AFFILIATE PRODUCT{% endcomment %}
                 <a href="{{ product.metafields.info.affiliate_link }}" class="my-3 btn btn-theme btn--full product-form__cart-submit {% if block.settings.enable_payment_button %}product-form__cart-submit--outline{% endif %}">
@@ -543,20 +546,20 @@
                 {% unless product.has_only_default_variant %}
                 {% for option in product.options_with_values %}
                 <div class="selector-wrapper js product-form__item">
-                  <label {% if option.name == 'default' %}class="label--hidden" {% endif %}for="SingleOptionSelector-{{ section.id }}-{{ forloop.index0 }}">{{ option.name }} 
+                  <label {% if option.name == 'default' %}class="label--hidden" {% endif %}for="SingleOptionSelector-{{ section.id }}-{{ forloop.index0 }}">{{ option.name }}
                     : <span class="txt-body-60 js-swatch-display--{{ forloop.index }} ml-1"></span>
                   </label>
-                  {% render 'productOption', 
+                  {% render 'productOption',
                   product: product,
                   option: option,
                   firstloop: forloop.index0,
                   loop: forloop.index,
-                  product_selector: block.settings.product_selector, 
+                  product_selector: block.settings.product_selector,
                   sw_color_product: block.settings.sw_color_product,
                   size_color: block.settings.size_color,
                   color_circle: block.settings.color_circle
                  %}
-                  
+
                 </div>
                 {% endfor %}
                 <div class="mb-4">
@@ -592,7 +595,7 @@
                     <button type="submit"
                             name="add"
                             id="AddToCart-{{ section.id }}"
-                            class="btn btn--full btn-theme product-form__cart-submit {% if block.settings.enable_payment_button %}product-form__cart-submit--outline{% endif %}{% unless current_variant.available %} btn--sold-out{% endunless %}"
+                            class="btn btn--full btn-theme btn-white product-form__cart-submit {% if block.settings.enable_payment_button %}product-form__cart-submit--outline{% endif %}{% unless current_variant.available %} btn--sold-out{% endunless %}"
                             {% unless current_variant.available %}disabled="disabled"{% endunless %}>
                       <span id="AddToCartText-{{ section.id }}">
                         {% unless current_variant.available %}
@@ -631,11 +634,11 @@
                         <span>{{ 'products.product.compare_text' | t }}</span>
                       </span>
                       {% endif %}
-                      
+
                     </div>
-                    
+
                   </div>
-                </div> 
+                </div>
                 {% endform %}
                 {% render 'notifySoldoutProduct', product: product %}
               {% endif %}
@@ -668,11 +671,11 @@
             </pickup-availability>
             <script src="{{ 'pickup-availability.js' | asset_url }}" defer ></script>
             {%- endif -%}
-            {%- when 'share' -%} 
+            {%- when 'share' -%}
               <div class="product-block">
                 {% render 'social-sharing', share_title: product.title, share_permalink: product.url, share_image: product %}
               </div>
-            {%- when 'related-product' -%} 
+            {%- when 'related-product' -%}
               <div class="product-block">
                   {%- if block.settings.title_heading != blank -%}
                      <h4 class="mb-4">{{ block.settings.title_heading }}</h4>
@@ -685,7 +688,7 @@
                     {%- endfor -%}
                   </div>
               </div>
-            {%- when 'list-info' -%} 
+            {%- when 'list-info' -%}
                 <div class="product-single__information product-block">
                   {% if block.settings.product_vendor_enable %}
                   <p class="product-single__vendor"><small class="p-attr txt-body-60">{{ 'products.product.vendor' | t }}: </small><small>{{ product.vendor }}</small></p>
@@ -700,16 +703,16 @@
                   <p class="product-single__availability "><small class="p-attr txt-body-60">{{ 'products.product.available' | t }}: </small><small>{% if current_variant.available %}{{ 'products.product.available' | t }}{% else %}{{ 'products.product.sold_out' | t }}{% endif %}</small></p>
                   {% endif %}
                 </div>
-            {%- when 'image' -%} 
+            {%- when 'image' -%}
               <div class="safe-checkout-detail product-block">
-                <img class="lazyload img-fluid w-100" 
-                  loading="lazy" 
+                <img class="lazyload img-fluid w-100"
+                  loading="lazy"
                   src = "{{ block.settings.image | image_url: width: 600 }}"
-                  data-src="{{ block.settings.image | image_url: width: 600 }}" 
-                  height="auto" 
+                  data-src="{{ block.settings.image | image_url: width: 600 }}"
+                  height="auto"
                   width="{{ block.settings.image.width }}"/>
               </div>
-            {%- when 'trust-badge' -%} 
+            {%- when 'trust-badge' -%}
               <div class="ptrust-badge product-block">
                 <div class="ptrust-badge-box border px-3 py-4 position-relative ">
                   {%- if block.settings.trust-heading != blank -%}
@@ -761,8 +764,8 @@
                 </div>
               </div>
             {%- when 'fakeviewer' -%}
-              {% render 'fake-viewer' , 
-              fake_view_text_prefix : block.settings.fake_view_text_prefix, 
+              {% render 'fake-viewer' ,
+              fake_view_text_prefix : block.settings.fake_view_text_prefix,
               fake_view_min: block.settings.fake_view_min,
               fake_view_max: block.settings.fake_view_max,
               fake_view_duration: block.settings.fake_view_duration,
@@ -773,7 +776,7 @@
               </div>
             {%- when 'shippingtime' -%}
                 <div class="product-block product-shippingtime">
-                  {% render 'shipping-time', 
+                  {% render 'shipping-time',
                     shipping_button : block.settings.shipping_button,
                     page_shipping: block.settings.page_shipping %}
                 </div>
@@ -784,8 +787,8 @@
             {%- when 'tabfix' -%}
               <div class="product-block">
                 {%- if block.settings.enable_tabvertical -%}
-                  {%- render 'product-information-vertical', 
-                    product : product, 
+                  {%- render 'product-information-vertical',
+                    product : product,
                     gtab_des : block.settings.gtab_des,
                     stab_title1 : block.settings.stab_title1,
                     stab_content1 : block.settings.stab_content1,
@@ -799,8 +802,8 @@
                     gtab_review : block.settings.gtab_review -%}
                   </div>
                 {%- else -%}
-                  {%- render 'product-information', 
-                    product : product, 
+                  {%- render 'product-information',
+                    product : product,
                     gtab_des : block.settings.gtab_des,
                     stab_title1 : block.settings.stab_title1,
                     stab_content1 : block.settings.stab_content1,
@@ -814,7 +817,7 @@
                     gtab_review : block.settings.gtab_review -%}
                   </div>
                 {%- endif -%}
-              
+
             {%- endcase -%}
           {%- endfor -%}
         </div>
@@ -827,7 +830,7 @@
     render 'photoswipe'
     render 'sticky-cart'
   -%}
-  
+
 </div>
 {%- if first_3d_model -%}
   <script type="application/json" id="ProductJSON-{{ product.id }}">
@@ -840,7 +843,7 @@
 
 var initPhotoSwipeFromDOM = function(gallerySelector) {
 
-// parse slide data (url, title, size ...) from DOM elements 
+// parse slide data (url, title, size ...) from DOM elements
 // (children of gallerySelector)
 var parseThumbnailElements = function(el) {
   var thumbElements = Array.prototype.slice.call(document.querySelectorAll('.photo-image')),
@@ -854,7 +857,7 @@ var parseThumbnailElements = function(el) {
   for (var i = 0; i < numNodes; i++) {
 
     figureEl = thumbElements[i]; // <figure> element
-    // include only element nodes 
+    // include only element nodes
     if (figureEl.nodeType !== 1) {
       continue;
     }
@@ -865,8 +868,8 @@ var parseThumbnailElements = function(el) {
     }else{
       size =  [] ;
     }
-    
-    
+
+
 
     // create slide object
     item = {
@@ -982,7 +985,7 @@ var openPhotoSwipe = function(index, galleryElement, disableAnimation, fromURL) 
 
   // define options (if needed)
   options = {
-    maxSpreadZoom: 1, 
+    maxSpreadZoom: 1,
     bgOpacity: 0.7,
     zoomEl: true,
     history: false,
@@ -997,7 +1000,7 @@ var openPhotoSwipe = function(index, galleryElement, disableAnimation, fromURL) 
   // PhotoSwipe opened from URL
   if (fromURL) {
     if (options.galleryPIDs) {
-      // parse real index when custom PIDs are used 
+      // parse real index when custom PIDs are used
       // http://photoswipe.com/documentation/faq.html#custom-pid-in-url
       for (var j = 0; j < items.length; j++) {
         if (items[j].pid == index) {
