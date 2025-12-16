@@ -2679,7 +2679,6 @@ span.js-fake-view.text-theme {
   position: relative;
   overflow: hidden;
   display: flex;
-  border-radius: 20px;
   justify-content: flex-start;
 }
 .banner-theme img {

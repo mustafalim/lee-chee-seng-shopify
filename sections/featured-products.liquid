@@ -4,15 +4,15 @@
   <div class="{{ section.settings.setwidth }}">
     <div class="section-block">
       {%- liquid
-        render 'section-heading' 
-        assign collection = collections[section.settings.collection] 
-        assign rows = section.settings.rows 
+        render 'section-heading'
+        assign collection = collections[section.settings.collection]
+        assign rows = section.settings.rows
       -%}
       {%- if collection != blank -%}
       {%- assign product_limit = rows -%}
       <div class="row {% if section.settings.enable_creative %} psection-creative {% endif %} {% unless section.settings.padding %} m-0 {% endunless %}" data-aos="{{ section.settings.animation }}">
         {%- for product in collection.products limit: product_limit -%}
-        <div class="{{ section.settings.colgrid }} col-md-6 col-sm-6 col-xs-6 col-6 {% unless section.settings.padding %} p-0 {% endunless %} col-item " 
+        <div class="{{ section.settings.colgrid }} col-md-6 col-sm-6 col-xs-12 col-12 {% unless section.settings.padding %} p-0 {% endunless %} col-item "
           data-aos="{{ section.settings.animation }}"  data-aos-delay="{{ forloop.index | times: 50 }}" >
           {%- render 'product-card', product: product, collection: collection -%}
         </div>
