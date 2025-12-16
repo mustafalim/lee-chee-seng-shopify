@@ -21,6 +21,7 @@
           "settings": {
             "width": "12",
             "image": "shopify://shop_images/faq-banner.jpg",
+            "image_mobile": "shopify://shop_images/faq-banner-mobile.jpg",
             "subtitle": "",
             "color_sub": "#000000",
             "title": "Frequently Asked Questions",
@@ -43,7 +44,9 @@
         "banner_Yge7Da"
       ],
       "custom_css": [
-        ".h1 {text-transform: none; }"
+        ".h1 {text-transform: none;}",
+        ".banner-theme {border-radius: 20px;}",
+        "@media screen and (max-width: 749px) {.h1 {width: 50%; margin: 0 auto; }}"
       ],
       "name": "Grid banner",
       "settings": {
@@ -222,7 +225,7 @@
         "padding": true,
         "col_center": false,
         "paddingsection": "50px 0px 50px 0px",
-        "paddingmobile": "0px 0px 60px 0px",
+        "paddingmobile": "30px 0px 30px 0px",
         "marginsection": "0px 0px 0px 0px",
         "marginmobile": "0px 0px 0px 0px"
       }
