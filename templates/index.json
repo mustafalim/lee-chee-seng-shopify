@@ -9,13 +9,12 @@
  */
 {
   "sections": {
-    "e5c3925a-90b4-4044-a9e2-99b838b4f9e2": {
-      "type": "grid-banner",
+    "banner_carousel_6QjL99": {
+      "type": "banner-carousel",
       "blocks": {
-        "93c7c5b0-ab46-46e0-8d20-90c17b281b75": {
+        "banner_KUfJ7H": {
           "type": "banner",
           "settings": {
-            "width": "4",
             "image": "shopify://shop_images/home-collection-factory-packaging-items.jpg",
             "subtitle": "",
             "color_sub": "#000000",
@@ -34,10 +33,9 @@
             "text_align": "center"
           }
         },
-        "banner_rF4TkB": {
+        "banner_gVkLaU": {
           "type": "banner",
           "settings": {
-            "width": "4",
             "image": "shopify://shop_images/home-collection-party-ware.jpg",
             "subtitle": "",
             "color_sub": "#000000",
@@ -56,14 +54,13 @@
             "text_align": "center"
           }
         },
-        "banner_DTLr7b": {
+        "banner_BXDm6d": {
           "type": "banner",
           "settings": {
-            "width": "4",
             "image": "shopify://shop_images/home-collection-hygeine-products.jpg",
             "subtitle": "",
             "color_sub": "#000000",
-            "title": "HYgeine Products",
+            "title": "Hygeine Products",
             "color_title": "#ffffff",
             "size_text": "h2",
             "description": "",
@@ -77,27 +74,54 @@
             "horizontal": "center",
             "text_align": "center"
           }
+        },
+        "banner_AAp4KJ": {
+          "type": "banner",
+          "settings": {
+            "image": "shopify://shop_images/home-collection-bio-products.jpg",
+            "subtitle": "",
+            "color_sub": "#000000",
+            "title": "Bio PRODUCTS",
+            "color_title": "#ffffff",
+            "size_text": "h2",
+            "description": "",
+            "bg_color": "#ffffff",
+            "colordef": "#ffffff",
+            "opacity_bg": 0,
+            "style_btn": "btn-underline btn-underline-white",
+            "button_text": "View more",
+            "button_link": "shopify://collections/bio-products",
+            "vertical": "bottom",
+            "horizontal": "center",
+            "text_align": "center"
+          }
         }
       },
       "block_order": [
-        "93c7c5b0-ab46-46e0-8d20-90c17b281b75",
-        "banner_rF4TkB",
-        "banner_DTLr7b"
+        "banner_KUfJ7H",
+        "banner_gVkLaU",
+        "banner_BXDm6d",
+        "banner_AAp4KJ"
       ],
+      "name": "Banner (carousel)",
       "settings": {
         "animation": "",
         "setwidth": "container",
-        "bgsection": "#ffffff",
-        "title_top": "",
-        "title": "",
+        "countdown_header": "",
+        "title_top": "OUR GREEN COLLECTION",
+        "title": "Shop By Categories",
         "des": "",
+        "button_bottom": "",
+        "link_button_bottom": "",
         "align-heading": "center",
-        "no_gutter": false,
-        "show_overlay": false,
-        "gradient_overlay": true,
-        "bg_overlay": "rgba(0,0,0,0)",
-        "opacity_overlay": 0.4,
-        "paddingsection": "30px 0px 0px 0px",
+        "arrows": true,
+        "draggable": true,
+        "dots": false,
+        "infinite": true,
+        "rows": "1",
+        "show": 3,
+        "bgsection": "#ffffff",
+        "paddingsection": "40px 0px 40px 0px",
         "paddingmobile": "40px 0px 40px 0px",
         "marginsection": "0px 0px 0px 0px",
         "marginmobile": "0px 0px 0px 0px"
@@ -337,7 +361,7 @@
     }
   },
   "order": [
-    "e5c3925a-90b4-4044-a9e2-99b838b4f9e2",
+    "banner_carousel_6QjL99",
     "image_content_FJUQxf",
     "featured_products_jYiKEf",
     "grid_banner_Y4VTpk",

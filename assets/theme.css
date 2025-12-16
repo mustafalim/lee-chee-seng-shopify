@@ -10278,7 +10278,7 @@ a.text-primary:active {
 .btn-underline {
   padding-top:0;
   padding-bottom: 0px;
-  border-width: 0 0 var(--g-height-border-btnline) 0;
+  border-bottom: var(--g-height-border-btnline) solid;
   border-bottom-color: var(--g-cta-button) !important;
   color: var(--g-cta-button) !important;
   padding-left: 0;
