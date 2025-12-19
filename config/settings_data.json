@@ -2444,21 +2444,21 @@
               "title": "",
               "text": "we specializes in disposable packaging and party ware, also provide delivery and wholesale services to the food industry.",
               "show_social": true,
-              "width": "33%"
+              "width": "25%"
             }
           },
           "0c325a8d-bfb1-450c-a284-90ce9f9f9ee5": {
             "type": "menu",
             "settings": {
               "link_list": "footer-products-menu",
-              "width": "20%"
+              "width": "16%"
             }
           },
           "02938bc4-37e0-4199-a42d-5120a9cb648f": {
             "type": "menu",
             "settings": {
               "link_list": "footer-quick-links-menu",
-              "width": "20%"
+              "width": "16%"
             }
           },
           "dbb31813-2c26-4013-a98e-fe9a3fb8a781": {
@@ -2466,9 +2466,19 @@
             "settings": {
               "widthlogofooter": 260,
               "title": "Whatsapp Support",
-              "text": "<ul style=\"line-height:1.6;\">\n    <li class=\"mb-4\">\n        <div>\nT: + (08) 9055 0269</div>\n        <div>\nE: example@example.com</div>\n    </li>\n    <li>\n        50 Porana Place, West Casuarinas,<br>\n        Western Australia, Australia.\n    </li>\n</ul>",
+              "text": "<ul style=\"line-height:1.6;\">\n    <li class=\"mb-4\">\n        <div>\nT: +65 6562 1864</div>\n        <div>\nE: lcslcs1980@gmail.com</div>\n    </li>\n    <li>\n        Blk 348 Jurong East Ave 1  #01-1255 S(600348)\n    </li>\n</ul>",
               "show_social": false,
-              "width": "25%"
+              "width": "20%"
+            }
+          },
+          "text_RWxq9X": {
+            "type": "text",
+            "settings": {
+              "widthlogofooter": 260,
+              "title": "Opening Hours",
+              "text": "Mon - Sat: 8:00am - 5:00pm<br>\nSun: 8:00am - 12:30pm",
+              "show_social": false,
+              "width": "20%"
             }
           }
         },
@@ -2477,7 +2487,8 @@
           "a0427cc6-35bf-4e6f-8da6-9542b963b62f",
           "0c325a8d-bfb1-450c-a284-90ce9f9f9ee5",
           "02938bc4-37e0-4199-a42d-5120a9cb648f",
-          "dbb31813-2c26-4013-a98e-fe9a3fb8a781"
+          "dbb31813-2c26-4013-a98e-fe9a3fb8a781",
+          "text_RWxq9X"
         ],
         "custom_css": [
           "@media screen and (min-width: 750px) {.rte-setting {max-width: 300px; }}"
